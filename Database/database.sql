@@ -307,9 +307,58 @@ INSERT INTO LOAIMON (MaLoaiMon, TenLoaiMon, SoTietMotTC, SoTienMotTC) VALUES
 (LM2, N'Thực hành', 30, 37000);
 
 --Table MONHOC (0/50)
-INSERT INTO MONHOC (MaMH, TenMH, SoTiet, SoTC, MaLoaiMon) VALUES
-(, N'', , , ),
-(, N'', , , );
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES
+('MH001', N'Tư tưởng Hồ Chí Minh', 30, 'LM1'),
+('MH002', N'Triết học Mác – Lênin', 45, 'LM1'),
+('MH003', N'Kinh tế chính trị Mác – Lênin', 30, 'LM1'),
+('MH004', N'Chủ nghĩa xã hội khoa học', 30, 'LM1'),
+('MH005', N'Lịch sử Đảng Cộng sản Việt Nam', 30, 'LM1'),
+('MH006', N'Giải tích', 60, 'LM1'),
+('MH007', N'Đại số tuyến tính', 45, 'LM1'),
+('MH008', N'Cấu trúc rời rạc', 60, 'LM1'),
+('MH009', N'Xác suất thống kê', 45, 'LM1'),
+('MH010', N'Nhập môn Lập trình', 60, 'LM1'),
+('MH011', N'Kỹ năng nghề nghiệp', 30, 'LM1'),
+('MH012', N'Pháp luật đại cương', 30, 'LM1'),
+('MH013', N'Văn hóa doanh nghiệp Nhật Bản', 30, 'LM1'),
+('MH014', N'Tiếng Nhật 1', 60, 'LM1'),
+('MH015', N'Tiếng Nhật 2', 60, 'LM1'),
+('MH016', N'Tiếng Nhật 3', 60, 'LM1'),
+('MH017', N'Tiếng Nhật 4', 60, 'LM1'),
+('MH018', N'Tiếng Nhật 5', 45, 'LM1'),
+('MH019', N'Tiếng Nhật 6', 45, 'LM1'),
+('MH020', N'Tiếng Nhật 7', 45, 'LM1'),
+('MH021', N'Tiếng Nhật 8', 45, 'LM1'),
+('MH022', N'Lập trình hướng đối tượng', 45, 'LM1'),
+('MH023', N'Lập trình hướng đối tượng', 30, 'LM2'),
+('MH024', N'Cấu trúc dữ liệu và giải thuật', 45, 'LM1'),
+('MH025', N'Cơ sở dữ liệu', 45, 'LM1'),
+('MH026', N'Nhập môn mạng máy tính', 45, 'LM1'),
+('MH027', N'Nhập môn mạng máy tính', 30, 'LM2'),
+('MH028', N'Tổ chức và cấu trúc máy tính II', 45, 'LM1'),
+('MH029', N'Tổ chức và cấu trúc máy tính II', 30, 'LM2'),
+('MH030', N'Hệ điều hành', 45, 'LM1'),
+('MH031', N'Hệ điều hành', 30, 'LM2'),
+('MH032', N'Giới thiệu ngành Công nghệ Thông tin', 15, 'LM1'),
+('MH033', N'Cơ sở hạ tầng công nghệ thông tin', 45, 'LM1'),
+('MH034', N'Cơ sở hạ tầng công nghệ thông tin', 30, 'LM2'),
+('MH035', N'Quản lý thông tin', 45, 'LM1'),
+('MH036', N'Quản lý thông tin', 30, 'LM2'),
+('MH037', N'Internet và công nghệ Web', 45, 'LM1'),
+('MH038', N'Internet và công nghệ Web', 30, 'LM2'),
+('MH039', N'Thiết kế giao diện người dùng', 45, 'LM1'),
+('MH040', N'Thiết kế giao diện người dùng', 30, 'LM2'),
+('MH041', N'Nhập môn đảm bảo và an ninh thông tin', 45, 'LM1'),
+('MH042', N'Nhập môn đảm bảo và an ninh thông tin', 30, 'LM2'),
+('MH043', N'Nhập môn công nghệ phần mềm', 45, 'LM1'),
+('MH044', N'Nhập môn công nghệ phần mềm', 30, 'LM2'),
+('MH045', N'Điện toán đám mây', 45, 'LM1'),
+('MH046', N'Các chủ đề toán học cho KHDL', 45, 'LM1'),
+('MH047', N'Học máy thống kê', 45, 'LM1'),
+('MH048', N'Học máy thống kê', 30, 'LM2'),
+('MH049', N'Xử lý dữ liệu lớn', 45, 'LM1'),
+('MH050', N'Xử lý dữ liệu lớn', 30, 'LM2');
+
 
 --Table HOCKY_NAMHOC (12/12)
 SET DATEFORMAT DMY
