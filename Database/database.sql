@@ -221,30 +221,25 @@ INSERT INTO DTUUTIEN (MaDT, TenDT, TiLeGiam) VALUES
 
 -- Table KHOA (6/5)
 INSERT INTO KHOA (MaKhoa, TenKhoa) VALUES
-(, N'Khoa học máy tính'),
-(, N'Khoa học và Kỹ thuật thông tin'),
-(, N'Kỹ thuật máy tính'),
-(, N'Công nghệ phần mềm'),
-(, N'Hệ thống thông tin'),
-(, N'Mạng máy tính và truyền thông');
+(K01, N'Khoa học máy tính'),
+(K02, N'Khoa học và Kỹ thuật thông tin'),
+(K03, N'Kỹ thuật máy tính'),
+(K04, N'Công nghệ phần mềm'),
+(K05, N'Hệ thống thông tin'),
+(K06, N'Mạng máy tính và truyền thông');
 
 --Table NGANHHOC (10/10)
 INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
-(, N'Khoa học Máy tính', ),
-(, N'Trí tuệ nhân tạo', ),
-
-(, N'Công nghệ Thông tin', ),
-(, N'Khoa học Dữ liệu', ),
-
-(, N'Kỹ thuật Máy tính', ),
-
-(, N'Kỹ thuật Phần mềm', ),
-
-(, N'Hệ thống Thông tin', ),
-(, N'Thương mại điện tử', ),
-
-(, N'Mạng máy tính và Truyền thông dữ liệu', ),
-(, N'An toàn Thông tin', );
+(NH0001, N'Khoa học Máy tính', K01),
+(NH0002, N'Trí tuệ nhân tạo', K01),
+(NH0003, N'Công nghệ Thông tin', K02),
+(NH0004, N'Khoa học Dữ liệu', K02),
+(NH0005, N'Kỹ thuật Máy tính', K03),
+(NH0006, N'Kỹ thuật Phần mềm', K04),
+(NH0007, N'Hệ thống Thông tin', K05),
+(NH0008, N'Thương mại điện tử', K05),
+(NH0009, N'Mạng máy tính và Truyền thông dữ liệu', K06),
+(NH00010, N'An toàn Thông tin', K06);
 
 --Table SINHVIEN (0/50+)
 INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALUES
@@ -253,8 +248,8 @@ INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALU
 
 --Table LOAIMON (2/2)
 INSERT INTO LOAIMON (MaLoaiMon, TenLoaiMon, SoTietMotTC, SoTienMotTC) VALUES
-(, N'Lý thuyết', 15, 27000),
-(, N'Thực hành', 30, 37000);
+(LM1, N'Lý thuyết', 15, 27000),
+(LM2, N'Thực hành', 30, 37000);
 
 --Table MONHOC (0/50)
 INSERT INTO MONHOC (MaMH, TenMH, SoTiet, SoTC, MaLoaiMon) VALUES
