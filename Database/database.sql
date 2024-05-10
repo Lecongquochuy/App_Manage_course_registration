@@ -214,3 +214,34 @@ INSERT INTO HUYEN (MaHuyen, TenHuyen, MaTinh, VungSauVungXa) VALUES
 ('HUYN49', N'Đakrông', 'T10', 0),
 ('HUYN50', N'Vĩnh Linh', 'T10', 0);
 
+-- Table KHOA
+INSERT INTO KHOA (MaKhoa, TenKhoa) VALUES
+(, N'Khoa học máy tính'),
+(, N'Khoa học và Kỹ thuật thông tin'),
+(, N'Kỹ thuật máy tính'),
+(, N'Công nghệ phần mềm'),
+(, N'Hệ thống thông tin'),
+(, N'Mạng máy tính và truyền thông');
+
+--Table NGANHHOC
+INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
+(, N'Khoa học Máy tính', N''),
+(, N'Trí tuệ nhân tạo', N''),
+
+(, N'Công nghệ Thông tin', N''),
+(, N'Khoa học Dữ liệu', N''),
+
+(, N'Kỹ thuật Máy tính', N''),
+
+(, N'Kỹ thuật Phần mềm', N''),
+
+(, N'Hệ thống Thông tin', N''),
+(, N'Thương mại điện tử', N''),
+
+(, N'Mạng máy tính và Truyền thông dữ liệu', N''),
+(, N'An toàn Thông tin', N'');
+
+--Table LOAIMON
+INSERT INTO LOAIMON (MaLoaiMon, TenLoaiMon, SoTietMotTC, SoTienMotTC) VALUES
+(, N'Lý thuyết', 15, 27000),
+(, N'Thực hành', 30, 37000);
