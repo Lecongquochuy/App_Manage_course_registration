@@ -251,10 +251,10 @@ INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALU
 (21522141, N'Hoàng Gia Huy', , N'Nam', , DT001, NH0003),
 (21522676, N'Nguyễn Thành Tín', , N'Nam', , DT001, NH0003),
 (21521667, N'Phan Vỹ Văn', , N'Nam', , DT001, NH0003),
-(, N'', , N'', , , ),
-(, N'', , N'', , , ),
-(, N'', , N'', , , ),
-(, N'', , N'', , , ),
+(20521062, N'Dương Thị Ngọc Anh', , N'Nữ', , , ),
+(20521061, N'Đỗ Trần Mai Anh', , N'Nữ', , , ),
+(21520138, N'Lê Nguyễn Nhật Anh', , N'Nữ', , , ),
+(20520900, N'Nguyễn Ngọc Mai Khanh', , N'Nữ', , , ),
 (, N'', , N'', , , ),
 (, N'', , N'', , , );
 
