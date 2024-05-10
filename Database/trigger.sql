@@ -227,3 +227,26 @@ BEGIN
         ROLLBACK TRANSACTION
     END
 END;
+
+--Trigger - Chỉ được đăng ký các môn học được mở trong cùng học kỳ năm học
+CREATE TRIGGER TRIG_ISUD_CT_DKHP_MAHKNH
+ON CT_DKHP FOR INSERT, UPDATE
+AS
+BEGIN
+	DECLARE @MaHKNH1 VARCHAR(4)
+	DECLARE @MaHKNH2 VARCHAR(4)
+
+	SELECT @MaHKNH1 = MaHKNH
+	FROM PHIEUDKHP PDKHP 
+	JOIN inserted i ON PDKHP.MaPhieuDKHP = i.MaPhieuDKHP
+
+	SELECT @MaHKNH2 = MaHKNH
+	FROM DSMHMO DSMM
+	JOIN inserted i ON DSMM.MaMo = i.MaMo
+
+    IF (@MaHKNH1 <> @MaHKNH2)
+    BEGIN
+        RAISERROR ('Chỉ được đăng ký các môn học được mở trong cùng học kỳ năm học!', 16, 1)
+        ROLLBACK TRANSACTION
+    END
+END;
