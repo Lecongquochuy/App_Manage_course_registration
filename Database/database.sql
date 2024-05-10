@@ -214,6 +214,11 @@ INSERT INTO HUYEN (MaHuyen, TenHuyen, MaTinh, VungSauVungXa) VALUES
 ('HUYN49', N'Đakrông', 'T10', 0),
 ('HUYN50', N'Vĩnh Linh', 'T10', 0);
 
+--Table DTUUTIEN
+INSERT INTO DTUUTIEN (MaDT, TenDT, TiLeGiam) VALUES
+(, N'', ),
+(, N'', );
+
 -- Table KHOA
 INSERT INTO KHOA (MaKhoa, TenKhoa) VALUES
 (, N'Khoa học máy tính'),
@@ -241,7 +246,32 @@ INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
 (, N'Mạng máy tính và Truyền thông dữ liệu', ),
 (, N'An toàn Thông tin', );
 
+--Table SINHVIEN
+INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALUES
+(, N'', , N'', , , ),
+(, N'', , N'', , , );
+
 --Table LOAIMON
 INSERT INTO LOAIMON (MaLoaiMon, TenLoaiMon, SoTietMotTC, SoTienMotTC) VALUES
 (, N'Lý thuyết', 15, 27000),
 (, N'Thực hành', 30, 37000);
+
+--Table MONHOC
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, SoTC, MaLoaiMon) VALUES
+(, N'', , , ),
+(, N'', , , );
+
+--Table HOCKY_NAMHOC
+INSERT INTO HOCKY_NAMHOC (MaHKNH, HocKy, NamHoc, ThoiHanDongHocPhi) VALUES
+(, 1, 20182019, ),
+(, 2, 20182019, ),
+(, 1, 20192020, ),
+(, 2, 20192020, ),
+(, 1, 20202021, ),
+(, 2, 20202021, ),
+(, 1, 20212022, ),
+(, 2, 20212022, ),
+(, 1, 20222023, ),
+(, 2, 20222023, ),
+(, 1, 20232024, ),
+(, 2, 20232024, );
