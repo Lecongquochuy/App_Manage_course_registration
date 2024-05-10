@@ -216,9 +216,10 @@ INSERT INTO HUYEN (MaHuyen, TenHuyen, MaTinh, VungSauVungXa) VALUES
 
 --Table DTUUTIEN (0/10)
 INSERT INTO DTUUTIEN (MaDT, TenDT, TiLeGiam) VALUES
-(DT001, N'Con liệt sĩ', 0.8),
-(DT002, N'Con thương binh', 0.5),
-(DT003, N'Vùng sâu vùng xa', 0.3),
+(DT001, N'Không đối tượng', 0),
+(DT002, N'Con liệt sĩ', 0.8),
+(DT003, N'Con thương binh', 0.5),
+(DT004, N'Vùng sâu vùng xa', 0.3),
 (, N'', );
 
 -- Table KHOA (6/5)
@@ -245,6 +246,15 @@ INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
 
 --Table SINHVIEN (0/50+)
 INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALUES
+(21522145, N'Lê Công Quốc Huy', , N'Nam', , DT001, NH0003),
+(21522146, N'Lê Gia Huy', , N'Nam', , DT001, NH0003),
+(21522141, N'Hoàng Gia Huy', , N'Nam', , DT001, NH0003),
+(21522676, N'Nguyễn Thành Tín', , N'Nam', , DT001, NH0003),
+(21521667, N'Phan Vỹ Văn', , N'Nam', , DT001, NH0003),
+(, N'', , N'', , , ),
+(, N'', , N'', , , ),
+(, N'', , N'', , , ),
+(, N'', , N'', , , ),
 (, N'', , N'', , , ),
 (, N'', , N'', , , );
 
