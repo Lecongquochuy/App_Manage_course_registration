@@ -233,16 +233,16 @@ INSERT INTO KHOA (MaKhoa, TenKhoa) VALUES
 
 --Table NGANHHOC (10/10)
 INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
-(NH0001, N'Khoa học Máy tính', K01),
-(NH0002, N'Trí tuệ nhân tạo', K01),
-(NH0003, N'Công nghệ Thông tin', K02),
-(NH0004, N'Khoa học Dữ liệu', K02),
-(NH0005, N'Kỹ thuật Máy tính', K03),
-(NH0006, N'Kỹ thuật Phần mềm', K04),
-(NH0007, N'Hệ thống Thông tin', K05),
-(NH0008, N'Thương mại điện tử', K05),
-(NH0009, N'Mạng máy tính và Truyền thông dữ liệu', K06),
-(NH00010, N'An toàn Thông tin', K06);
+(K01N01, N'Khoa học Máy tính', K01),
+(K01N02, N'Trí tuệ nhân tạo', K01),
+(K02N01, N'Công nghệ Thông tin', K02),
+(K02N02, N'Khoa học Dữ liệu', K02),
+(K03N01, N'Kỹ thuật Máy tính', K03),
+(K04N01, N'Kỹ thuật Phần mềm', K04),
+(K05N01, N'Hệ thống Thông tin', K05),
+(K05N02, N'Thương mại điện tử', K05),
+(K06N01, N'Mạng máy tính và Truyền thông dữ liệu', K06),
+(K06N02, N'An toàn Thông tin', K06);
 
 --Table SINHVIEN (0/50+)
 INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALUES
