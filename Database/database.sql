@@ -255,7 +255,7 @@ INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALU
 (20521061, N'Đỗ Trần Mai Anh', , N'Nữ', , , ),
 (21520138, N'Lê Nguyễn Nhật Anh', , N'Nữ', , , ),
 (20520900, N'Nguyễn Ngọc Mai Khanh', , N'Nữ', , , ),
-(, N'', , N'', , , ),
+(21522315, N'Nguyễn Thị Cẩm Ly', , N'Nữ', , , ),
 (, N'', , N'', , , );
 
 --Table LOAIMON (2/2)
