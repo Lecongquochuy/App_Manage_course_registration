@@ -214,12 +214,12 @@ INSERT INTO HUYEN (MaHuyen, TenHuyen, MaTinh, VungSauVungXa) VALUES
 ('HUYN49', N'Đakrông', 'T10', 0),
 ('HUYN50', N'Vĩnh Linh', 'T10', 0);
 
---Table DTUUTIEN
+--Table DTUUTIEN (0/10)
 INSERT INTO DTUUTIEN (MaDT, TenDT, TiLeGiam) VALUES
 (, N'', ),
 (, N'', );
 
--- Table KHOA
+-- Table KHOA (6/5)
 INSERT INTO KHOA (MaKhoa, TenKhoa) VALUES
 (, N'Khoa học máy tính'),
 (, N'Khoa học và Kỹ thuật thông tin'),
@@ -228,7 +228,7 @@ INSERT INTO KHOA (MaKhoa, TenKhoa) VALUES
 (, N'Hệ thống thông tin'),
 (, N'Mạng máy tính và truyền thông');
 
---Table NGANHHOC
+--Table NGANHHOC (10/10)
 INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
 (, N'Khoa học Máy tính', ),
 (, N'Trí tuệ nhân tạo', ),
@@ -246,22 +246,22 @@ INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
 (, N'Mạng máy tính và Truyền thông dữ liệu', ),
 (, N'An toàn Thông tin', );
 
---Table SINHVIEN
+--Table SINHVIEN (0/50+)
 INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALUES
 (, N'', , N'', , , ),
 (, N'', , N'', , , );
 
---Table LOAIMON
+--Table LOAIMON (2/2)
 INSERT INTO LOAIMON (MaLoaiMon, TenLoaiMon, SoTietMotTC, SoTienMotTC) VALUES
 (, N'Lý thuyết', 15, 27000),
 (, N'Thực hành', 30, 37000);
 
---Table MONHOC
+--Table MONHOC (0/50)
 INSERT INTO MONHOC (MaMH, TenMH, SoTiet, SoTC, MaLoaiMon) VALUES
 (, N'', , , ),
 (, N'', , , );
 
---Table HOCKY_NAMHOC
+--Table HOCKY_NAMHOC (12/12)
 INSERT INTO HOCKY_NAMHOC (MaHKNH, HocKy, NamHoc, ThoiHanDongHocPhi) VALUES
 (, 1, 20182019, ),
 (, 2, 20182019, ),
