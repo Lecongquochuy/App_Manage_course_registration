@@ -246,11 +246,11 @@ INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
 
 --Table SINHVIEN (0/50+)
 INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALUES
-(21522145, N'Lê Công Quốc Huy', , N'Nam', , DT001, NH0003),
-(21522146, N'Lê Gia Huy', , N'Nam', , DT001, NH0003),
-(21522141, N'Hoàng Gia Huy', , N'Nam', , DT001, NH0003),
-(21522676, N'Nguyễn Thành Tín', , N'Nam', , DT001, NH0003),
-(21521667, N'Phan Vỹ Văn', , N'Nam', , DT001, NH0003),
+(21522145, N'Lê Công Quốc Huy', , N'Nam', , DT001, K02N01),
+(21522146, N'Lê Gia Huy', , N'Nam', , DT001, K02N01),
+(21522141, N'Hoàng Gia Huy', , N'Nam', , DT001, K02N01),
+(21522676, N'Nguyễn Thành Tín', , N'Nam', , DT001, K02N01),
+(21521667, N'Phan Vỹ Văn', , N'Nam', , DT001, K02N01),
 (20521062, N'Dương Thị Ngọc Anh', , N'Nữ', , , ),
 (20521061, N'Đỗ Trần Mai Anh', , N'Nữ', , , ),
 (21520138, N'Lê Nguyễn Nhật Anh', , N'Nữ', , , ),
