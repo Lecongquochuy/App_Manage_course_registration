@@ -225,21 +225,21 @@ INSERT INTO KHOA (MaKhoa, TenKhoa) VALUES
 
 --Table NGANHHOC
 INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
-(, N'Khoa học Máy tính', N''),
-(, N'Trí tuệ nhân tạo', N''),
+(, N'Khoa học Máy tính', ),
+(, N'Trí tuệ nhân tạo', ),
 
-(, N'Công nghệ Thông tin', N''),
-(, N'Khoa học Dữ liệu', N''),
+(, N'Công nghệ Thông tin', ),
+(, N'Khoa học Dữ liệu', ),
 
-(, N'Kỹ thuật Máy tính', N''),
+(, N'Kỹ thuật Máy tính', ),
 
-(, N'Kỹ thuật Phần mềm', N''),
+(, N'Kỹ thuật Phần mềm', ),
 
-(, N'Hệ thống Thông tin', N''),
-(, N'Thương mại điện tử', N''),
+(, N'Hệ thống Thông tin', ),
+(, N'Thương mại điện tử', ),
 
-(, N'Mạng máy tính và Truyền thông dữ liệu', N''),
-(, N'An toàn Thông tin', N'');
+(, N'Mạng máy tính và Truyền thông dữ liệu', ),
+(, N'An toàn Thông tin', );
 
 --Table LOAIMON
 INSERT INTO LOAIMON (MaLoaiMon, TenLoaiMon, SoTietMotTC, SoTienMotTC) VALUES
