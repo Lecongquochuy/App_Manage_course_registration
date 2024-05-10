@@ -5,7 +5,7 @@ ALTER TABLE SINHVIEN
 ADD CONSTRAINT CEK_SV_GIOITINH CHECK (GioiTinh IN ('Nam', 'Nữ'));
 
 ALTER TABLE HOCKY_NAMHOC
-ADD CONSTRAINT CEK_HKNH_HOCKY CHECK (HocKy IN ('Học kỳ 1', 'Học kỳ 2', 'Học kỳ hè'));
+ADD CONSTRAINT CEK_HKNH_HOCKY CHECK (HocKy IN (1, 2, 3));
 
 ALTER TABLE DTUUTIEN
 ADD CONSTRAINT CEK_DTUT_TILEGIAM CHECK (TiLeGiam >= 0 AND TiLeGiam <= 1);
@@ -14,7 +14,7 @@ ALTER TABLE LOAIMON
 ADD CONSTRAINT CEK_LM_TENLOAIMON CHECK (TenLoaiMon IN ('Lý thuyết', 'Thực hành'));
 
 ALTER TABLE CT_NGANH
-ADD CONSTRAINT CEK_CTN_HOCKY CHECK (HocKy IN ('Học kỳ 1', 'Học kỳ 2', 'Học kỳ 3', 'Học kỳ 4', 'Học kỳ 5', 'Học kỳ 6', 'Học kỳ 7', 'Học kỳ 8'));
+ADD CONSTRAINT CEK_CTN_HOCKY CHECK (HocKy IN (1, 2, 3, 4, 5, 6, 7, 8));
 
 -- Trigger - xóa một phiếu DKHP sẽ xóa các thông tin liên quan.
 CREATE TRIGGER TRIG_DL_PHIEUDKHP
