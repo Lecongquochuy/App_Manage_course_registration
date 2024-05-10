@@ -1,3 +1,5 @@
+USE QLDKHP;
+
 -- Check
 ALTER TABLE SINHVIEN
 ADD CONSTRAINT GioiTinh CHECK (GioiTinh IN ('Nam', 'Nữ'));
@@ -179,5 +181,49 @@ BEGIN
 		SET SoTienDaDong = SoTienDaDong - @SoTienThu,
 			SoTienConLai = SoTienPhaiDong - (SoTienDaDong - @SoTienThu)
 		WHERE MaPhieuDKHP = @MaPhieuDKHP
+    END
+END;
+
+-- Trigger - Ngày lập phiếu thu phải trước thời hạn đóng học phí trong cùng một học kỳ năm học
+CREATE TRIGGER TRIG_ISUD_PHIEUTHUHP_CAPNHATSTDADONGVASTCONLAI
+ON PHIEUTHUHP FOR INSERT, UPDATE
+AS
+BEGIN
+	IF EXISTS (SELECT 1 FROM inserted i 
+				JOIN PHIEUDKHP pdk ON i.MaPhieuDKHP = pdk.MaPhieuDKHP
+				JOIN HOCKY_NAMHOC hknm ON hknm.MaHKNH = pdk.MaHKNH
+				WHERE i.NgayLap > hknm.ThoiHanDongHocPhi)
+    BEGIN
+        RAISERROR ('Ngày lập phiếu thu phải trước thời hạn đóng học phí trong cùng một học kỳ năm học!', 16, 1)
+        ROLLBACK TRANSACTION
+    END
+END;
+
+-- Trigger - Ngày lập phiếu ĐKHP phải trước thời hạn đóng học phí trong cùng một học kỳ năm học
+CREATE TRIGGER TRIG_ISUD_PHIEUTHUHP_CAPNHATSTDADONGVASTCONLAI
+ON PHIEUDKHP FOR INSERT, UPDATE
+AS
+BEGIN
+	IF EXISTS (SELECT 1 FROM inserted i 
+				JOIN HOCKY_NAMHOC hknm ON hknm.MaHKNH = i.MaHKNH
+				WHERE i.NgayLap > hknm.ThoiHanDongHocPhi)
+    BEGIN
+        RAISERROR ('Ngày lập phiếu ĐKHP phải trước thời hạn đóng học phí trong cùng một học kỳ năm học!', 16, 1)
+        ROLLBACK TRANSACTION
+    END
+END;
+
+
+-- Trigger - Số tiền thu không được vượt quá số tiền còn lại
+CREATE TRIGGER TRIG_ISUD_PHIEUTHUHP_SOTIENTHU_SOTIENCONLAI
+ON PHIEUTHUHP FOR INSERT, UPDATE
+AS
+BEGIN
+    IF EXISTS (SELECT 1 FROM inserted i 
+				JOIN PHIEUDKHP pdk ON i.MaPhieuDKHP = pdk.MaPhieuDKHP 
+				WHERE i.SoTienThu > pdk.SoTienConLai)
+    BEGIN
+        RAISERROR ('Số tiền thu không được vượt quá số tiền còn lại trong phiếu DKHP!', 16, 1)
+        ROLLBACK TRANSACTION
     END
 END;
