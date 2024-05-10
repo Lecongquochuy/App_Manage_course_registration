@@ -256,7 +256,50 @@ INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALU
 (21520138, N'Lê Nguyễn Nhật Anh', , N'Nữ', , , ),
 (20520900, N'Nguyễn Ngọc Mai Khanh', , N'Nữ', , , ),
 (21522315, N'Nguyễn Thị Cẩm Ly', , N'Nữ', , , ),
-(, N'', , N'', , , );
+
+(21521140, N'Nguyễn Tuệ Minh', , N'Nữ', , , ),
+(21521144, N'Trần Tuyết Minh', , N'Nữ', , , ),
+(21521174, N'Nguyễn Thị Kim Ngân', , N'Nữ', , , ),
+(21522884, N'Nguyễn Bích Phượng', , N'Nữ', , , ),
+(21521486, N'Bùi Thị Anh Thư', , N'Nữ', , , ),
+(21522698, N'Phan Huỳnh Thiên Trang', , N'Nữ', , , ),
+(21521804, N'Hồ Vũ An', , N'Nam', , , ),
+(21521846, N'Huỳnh Hải Băng', , N'Nam', , , ),
+(21521156, N'Đoàn Lê Giang Nam', , N'Nam', , , ),
+(21521178, N'Trần Thanh Nghị', , N'Nam', , , ),
+
+(21521180, N'Lê Đức Nghĩa', , N'Nam', , , ),
+(21521183, N'Nguyễn Thành Nghĩa', , N'Nam', , , ),
+(21521201, N'Nguyễn Đỗ Đức Nguyên', , N'Nam', , , ),
+(21521226, N'Nguyễn Minh Nhật', , N'Nam', , , ),
+(21521268, N'Nguyễn Thành Phi', , N'Nam', , , ),
+(21521271, N'Lê Thanh Phong', , N'Nam', , , ),
+(21521323, N'Dương Uy Quan', , N'Nam', , , ),
+(21521595, N'Nguyễn Thành Trung', , N'Nam', , , ),
+(21522747, N'Trịnh Tuấn Tú', , N'Nam', , , ),
+(21522755, N'Nguyễn Mạnh Tuấn', , N'Nam', , , ),
+
+(21520389, N'Phan Cả Phát', , N'Nam', , , ),
+(21522496, N'Nguyễn Minh Quân', , N'Nam', , , ),
+(21522515, N'Nguyễn Việt Quang', , N'Nam', , , ),
+(21522528, N'Dương Văn Quy', , N'Nam', , , ),
+(21522544, N'Nguyễn Ngọc Thanh Sang', , N'Nam', , , ),
+(21522556, N'Phạm Thanh Sơn', , N'Nam', , , ),
+(21521476, N'Vũ Ngọc Trường Thịnh', , N'Nam', , , ),
+(21522681, N'Phạm Đăng Tỉnh', , N'Nam', , , ),
+(21522712, N'Phạm Minh Triết', , N'Nam', , , ),
+(21522732, N'Lê Quang Trường', , N'Nam', , , ),
+
+(21522762, N'Trần Anh Tuấn', , N'Nam', , , )
+(21522885, N'Phan Thị Cát Tường', , N'Nữ', , , )
+(21522536, N'Nguyễn Phan Trúc Quỳnh', , N'Nữ', , , )
+(21522357, N'Lê Hải Nam', , N'Nam', , , )
+(21521108, N'Nguyễn Minh Lý', , N'Nam', , , )
+(21522276, N'Nguyễn Cao Lãm', , N'Nam', , , )
+(21522168, N'Trần Minh Huy', , N'Nam', , , )
+(21522037, N'Trần Thị Hải', , N'Nữ', , , )
+(21521029, N'Tô Quốc Kiện', , N'Nam', , , )
+(21522055, N'Phan Công Hậu', , N'Nam', , , );
 
 --Table LOAIMON (2/2)
 INSERT INTO LOAIMON (MaLoaiMon, TenLoaiMon, SoTietMotTC, SoTienMotTC) VALUES
