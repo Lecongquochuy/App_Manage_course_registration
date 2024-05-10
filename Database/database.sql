@@ -216,7 +216,9 @@ INSERT INTO HUYEN (MaHuyen, TenHuyen, MaTinh, VungSauVungXa) VALUES
 
 --Table DTUUTIEN (0/10)
 INSERT INTO DTUUTIEN (MaDT, TenDT, TiLeGiam) VALUES
-(, N'', ),
+(DT001, N'Con liệt sĩ', 0.8),
+(DT002, N'Con thương binh', 0.5),
+(DT003, N'Vùng sâu vùng xa', 0.3),
 (, N'', );
 
 -- Table KHOA (6/5)
