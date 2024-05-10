@@ -145,74 +145,74 @@ INSERT INTO TINH (MaTinh, TenTinh) VALUES
 -- Table HUYEN
 INSERT INTO HUYEN (MaHuyen, TenHuyen, MaTinh, VungSauVungXa) VALUES 
 -- Hà Nội
-('HUYN01', N'Ba Đình', 'T01', 0),
-('HUYN02', N'Hai Bà Trưng', 'T01', 0),
-('HUYN03', N'Cầu Giấy', 'T01', 0),
-('HUYN04', N'Thanh Trì', 'T01', 0),
-('HUYN05', N'Ba Vì', 'T01', 0),
+('T01H01', N'Ba Đình', 'T01', 0),
+('T01H02', N'Hai Bà Trưng', 'T01', 0),
+('T01H03', N'Cầu Giấy', 'T01', 0),
+('T01H04', N'Thanh Trì', 'T01', 0),
+('T01H05', N'Ba Vì', 'T01', 0),
 
 -- Hồ Chí Minh
-('HUYN06', N'Quận 1', 'T02', 0),
-('HUYN07', N'Quận 5', 'T02', 0),
-('HUYN08', N'Quận Bình Thạnh', 'T02', 0),
-('HUYN09', N'Quận 8', 'T02', 0),
-('HUYN10', N'Tp Thủ Đức', 'T02', 0),
+('T02H01', N'Quận 1', 'T02', 0),
+('T02H02', N'Quận 5', 'T02', 0),
+('T02H03', N'Quận Bình Thạnh', 'T02', 0),
+('T02H04', N'Quận 8', 'T02', 0),
+('T02H05', N'Tp Thủ Đức', 'T02', 0),
 
 -- Hải Phòng
-('HUYN11', N'Kiến An', 'T03', 0),
-('HUYN12', N'Lê Chân', 'T03', 0),
-('HUYN13', N'Ngô Quyền', 'T03', 0),
-('HUYN14', N'An Dương', 'T03', 0),
-('HUYN15', N'Hồng Bàng', 'T03', 0),
+('T03H01', N'Kiến An', 'T03', 0),
+('T03H02', N'Lê Chân', 'T03', 0),
+('T03H03', N'Ngô Quyền', 'T03', 0),
+('T03H04', N'An Dương', 'T03', 0),
+('T03H05', N'Hồng Bàng', 'T03', 0),
 
 -- Đà Nẵng
-('HUYN16', N'Hải Châu', 'T04', 0),
-('HUYN17', N'Liên Chiểu', 'T04', 0),
-('HUYN18', N'Ngũ Hành Sơn', 'T04', 0),
-('HUYN19', N'Sơn Trà', 'T04', 0),
-('HUYN20', N'Cẩm Lệ', 'T04', 0),
+('T04H01', N'Hải Châu', 'T04', 0),
+('T04H02', N'Liên Chiểu', 'T04', 0),
+('T04H03', N'Ngũ Hành Sơn', 'T04', 0),
+('T04H04', N'Sơn Trà', 'T04', 0),
+('T04H05', N'Cẩm Lệ', 'T04', 0),
 
 -- Thái Bình
-('HUYN21', N'Đông Hưng', 'T05', 0),
-('HUYN22', N'Hưng Hà', 'T05', 0),
-('HUYN23', N'Tiền Hải', 'T05', 0),
-('HUYN24', N'Kiến Xương', 'T05', 0),
-('HUYN25', N'Vũ Thư', 'T05', 0),
+('T05H01', N'Đông Hưng', 'T05', 0),
+('T05H02', N'Hưng Hà', 'T05', 0),
+('T05H03', N'Tiền Hải', 'T05', 0),
+('T05H04', N'Kiến Xương', 'T05', 0),
+('T05H05', N'Vũ Thư', 'T05', 0),
 
 -- Bình Dương
-('HUYN26', N'Thuận An', 'T06', 0),
-('HUYN27', N'Dĩ An', 'T06', 0),
-('HUYN28', N'Tân Uyên', 'T06', 0),
-('HUYN29', N'Thủ Dầu Một', 'T06', 0),
-('HUYN30', N'Bến Cát', 'T06', 0),
+('T06H01', N'Thuận An', 'T06', 0),
+('T06H02', N'Dĩ An', 'T06', 0),
+('T06H03', N'Tân Uyên', 'T06', 0),
+('T06H04', N'Thủ Dầu Một', 'T06', 0),
+('T06H05', N'Bến Cát', 'T06', 0),
 
 -- Đắk Lắk
-('HUYN31', N'Buôn Ma Thuột', 'T07', 0),
-('HUYN32', N'Krông Búk', 'T07', 1),
-('HUYN33', N'Ea Hleo', 'T07', 1),
-('HUYN34', N'Buôn Đôn', 'T07', 1),
-('HUYN35', N'Lắk', 'T07', 1),
+('T07H01', N'Buôn Ma Thuột', 'T07', 0),
+('T07H02', N'Krông Búk', 'T07', 1),
+('T07H03', N'Ea Hleo', 'T07', 1),
+('T07H04', N'Buôn Đôn', 'T07', 1),
+('T07H05', N'Lắk', 'T07', 1),
 
 -- Long An
-('HUYN36', N'Cần Giuộc', 'T08', 0),
-('HUYN37', N'Châu Thành', 'T08', 0),
-('HUYN38', N'Đức Hòa', 'T08', 0),
-('HUYN39', N'Cần Đước', 'T08', 0),
-('HUYN40', N'Bến Lức', 'T08', 0),
+('T08H01', N'Cần Giuộc', 'T08', 0),
+('T08H02', N'Châu Thành', 'T08', 0),
+('T08H03', N'Đức Hòa', 'T08', 0),
+('T08H04', N'Cần Đước', 'T08', 0),
+('T08H05', N'Bến Lức', 'T08', 0),
 
 -- Bình Định
-('HUYN41', N'Tuy Phước', 'T09', 0),
-('HUYN42', N'Hoài Ân', 'T09', 0),
-('HUYN43', N'Phù Cát', 'T09', 0),
-('HUYN44', N'Tp Quy Nhơn', 'T09', 0),
-('HUYN45', N'Vân Canh', 'T09', 0),
+('T09H01', N'Tuy Phước', 'T09', 0),
+('T09H02', N'Hoài Ân', 'T09', 0),
+('T09H03', N'Phù Cát', 'T09', 0),
+('T09H04', N'Tp Quy Nhơn', 'T09', 0),
+('T09H05', N'Vân Canh', 'T09', 0),
 
 -- Quảng Trị
-('HUYN46', N'Đông Hà', 'T10', 0),
-('HUYN47', N'Hải Lăng', 'T10', 0),
-('HUYN48', N'Triệu Phong', 'T10', 0),
-('HUYN49', N'Đakrông', 'T10', 0),
-('HUYN50', N'Vĩnh Linh', 'T10', 0);
+('T10H01', N'Đông Hà', 'T10', 0),
+('T10H02', N'Hải Lăng', 'T10', 0),
+('T10H03', N'Triệu Phong', 'T10', 0),
+('T10H04', N'Đakrông', 'T10', 0),
+('T10H05', N'Vĩnh Linh', 'T10', 0);
 
 --Table DTUUTIEN (0/10)
 INSERT INTO DTUUTIEN (MaDT, TenDT, TiLeGiam) VALUES
