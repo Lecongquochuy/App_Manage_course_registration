@@ -261,11 +261,13 @@ INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALU
 ('20520900', N'Nguyễn Ngọc Mai Khanh', '11-11-2002', N'Nữ', 'T01H03', 'DT001', 'K06N02'),
 ('21522315', N'Nguyễn Thị Cẩm Ly', '14-2-2003', N'Nữ', 'T09H01', 'DT007', 'K02N01'),
 
+--T7 H2345 DT4
+    
 ('21521140', N'Nguyễn Tuệ Minh', '25-11-2003', N'Nữ', 'T02H03', 'DT001', 'K04N01'),
 ('21521144', N'Trần Tuyết Minh', '22-5-2003', N'Nữ', 'T03H05', 'DT001', 'K04N01'),
 ('21521174', N'Nguyễn Thị Kim Ngân', '8-5-2003', N'Nữ', 'T08H05', 'DT007', 'K05N01'),
 ('21522884', N'Nguyễn Bích Phượng', '10-7-2003', N'Nữ', 'T02H04', 'DT001', 'K06N01'),
-('21521486', N'Bùi Thị Anh Thư', '16-10-2003', N'Nữ', 'T07H03', 'DT001', 'K06N01'),
+('21521486', N'Bùi Thị Anh Thư', '16-10-2003', N'Nữ', 'T07H03', 'DT004', 'K06N01'),
 ('21522698', N'Phan Huỳnh Thiên Trang', '15-2-2003', N'Nữ', 'T04H02', 'DT001', 'K01N01'),
 ('21521804', N'Hồ Vũ An', '6-10-2003', N'Nam', 'T03H05', 'DT001', 'K05N01'),
 ('21521846', N'Huỳnh Hải Băng', '1-7-2003', N'Nam', 'T10H05', 'DT001', 'K01N02'),
@@ -285,7 +287,7 @@ INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALU
 
 ('21520389', N'Phan Cả Phát', '23-11-2003', N'Nam', 'T01H01', 'DT001', 'K01N01'),
 ('21522496', N'Nguyễn Minh Quân', '23-7-2003', N'Nam', 'T09H01', 'DT001', 'K04N01'),
-('21522515', N'Nguyễn Việt Quang', '30-10-2003', N'Nam', 'T07H04', 'DT001', 'K05N02'),
+('21522515', N'Nguyễn Việt Quang', '30-10-2003', N'Nam', 'T07H04', 'DT004', 'K05N02'),
 ('21522528', N'Dương Văn Quy', '10-1-2003', N'Nam', 'T03H05', 'DT001', 'K01N01'),
 ('21522544', N'Nguyễn Ngọc Thanh Sang', '15-4-2003', N'Nam', 'T08H03', 'DT001', 'K01N01'),
 ('21522556', N'Phạm Thanh Sơn', '16-11-2003', N'Nam', 'T10H01', 'DT001', 'K01N01'),
@@ -295,7 +297,7 @@ INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALU
 ('21522732', N'Lê Quang Trường', '9-5-2003', N'Nam', 'T03H03', 'DT001', 'K02N02'),
 
 ('21522762', N'Trần Anh Tuấn', '14-1-2003', N'Nam', 'T07H01', 'DT001', 'K03N01'),
-('21522885', N'Phan Thị Cát Tường', '26-6-2003', N'Nữ', 'T07H03', 'DT001', 'K04N01'),
+('21522885', N'Phan Thị Cát Tường', '26-6-2003', N'Nữ', 'T07H03', 'DT004', 'K04N01'),
 ('21522536', N'Nguyễn Phan Trúc Quỳnh', '30-5-2003', N'Nữ', 'T06H02', 'DT001', 'K04N01'),
 ('21522357', N'Lê Hải Nam', '22-3-2003', N'Nam', 'T05H05', 'DT001', 'K04N01'),
 ('21521108', N'Nguyễn Minh Lý', '22-7-2003', N'Nam', 'T03H02', 'DT001', 'K02N01'),
