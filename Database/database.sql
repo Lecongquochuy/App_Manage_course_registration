@@ -313,7 +313,7 @@ INSERT INTO LOAIMON (MaLoaiMon, TenLoaiMon, SoTietMotTC, SoTienMotTC) VALUES
 --Table MONHOC 
 INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH001', N'Tư tưởng Hồ Chí Minh', 30, 'LM1');
 INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH002', N'Triết học Mác – Lênin', 45, 'LM1');
-INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES('MH003', N'Kinh tế chính trị Mác – Lênin', 30, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH003', N'Kinh tế chính trị Mác – Lênin', 30, 'LM1');
 INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH004', N'Chủ nghĩa xã hội khoa học', 30, 'LM1');
 INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH005', N'Lịch sử Đảng Cộng sản Việt Nam', 30, 'LM1');
 INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH006', N'Giải tích', 60, 'LM1');
@@ -421,6 +421,48 @@ INSERT INTO CT_NGANH (MaNH, MaMH, HocKy, GhiChu) VALUES
 ('K04N01', 'MH035', 7, ''),
 ('K04N01', 'MH036', 7, ''),
 ('K04N01', 'MH021', 8, '');
+
+INSERT INTO CT_NGANH (MaNH, MaMH, HocKy) VALUES
+('K05N01', 'MH010', 1),
+('K05N01', 'MH006', 1),
+('K05N01', 'MH007', 1),
+('K05N01', 'MH032', 2),
+('K05N01', 'MH028', 2),
+('K05N01', 'MH029', 3),
+('K05N01', 'MH014', 3),
+('K05N01', 'MH022', 4),
+('K05N01', 'MH023', 4),
+('K05N01', 'MH024', 4),
+('K05N01', 'MH008', 5),
+('K05N01', 'MH009', 5),
+('K05N01', 'MH015', 5),
+('K05N01', 'MH025', 6),
+('K05N01', 'MH026', 6),
+('K05N01', 'MH027', 7),
+('K05N01', 'MH002', 7),
+('K05N01', 'MH003', 7),
+('K05N01', 'MH016', 8),
+('K05N01', 'MH012', 8),
+('K05N02', 'MH011', 1),
+('K05N02', 'MH030', 1),
+('K05N02', 'MH031', 2),
+('K05N02', 'MH017', 2),
+('K05N02', 'MH005', 2),
+('K05N02', 'MH018', 3),
+('K05N02', 'MH001', 3),
+('K05N02', 'MH004', 3),
+('K05N02', 'MH013', 4),
+('K05N02', 'MH033', 4),
+('K05N02', 'MH034', 5),
+('K05N02', 'MH037', 5),
+('K05N02', 'MH038', 5),
+('K05N02', 'MH043', 6),
+('K05N02', 'MH044', 6),
+('K05N02', 'MH047', 7),
+('K05N02', 'MH048', 7),
+('K05N02', 'MH035', 8),
+('K05N02', 'MH036', 8),
+('K05N02', 'MH046', 8);
 
 INSERT INTO CT_NGANH(MaNH, MaMH, HocKy) VALUES
 ('K06N01', 'MH001', 5),
