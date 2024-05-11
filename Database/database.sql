@@ -310,58 +310,57 @@ INSERT INTO LOAIMON (MaLoaiMon, TenLoaiMon, SoTietMotTC, SoTienMotTC) VALUES
 ('LM1', N'Lý thuyết', 15, 27000),
 ('LM2', N'Thực hành', 30, 37000);
 
---Table MONHOC (50/50)
-INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES
-('MH001', N'Tư tưởng Hồ Chí Minh', 30, 'LM1'),
-('MH002', N'Triết học Mác – Lênin', 45, 'LM1'),
-('MH003', N'Kinh tế chính trị Mác – Lênin', 30, 'LM1'),
-('MH004', N'Chủ nghĩa xã hội khoa học', 30, 'LM1'),
-('MH005', N'Lịch sử Đảng Cộng sản Việt Nam', 30, 'LM1'),
-('MH006', N'Giải tích', 60, 'LM1'),
-('MH007', N'Đại số tuyến tính', 45, 'LM1'),
-('MH008', N'Cấu trúc rời rạc', 60, 'LM1'),
-('MH009', N'Xác suất thống kê', 45, 'LM1'),
-('MH010', N'Nhập môn Lập trình', 60, 'LM1'),
-('MH011', N'Kỹ năng nghề nghiệp', 30, 'LM1'),
-('MH012', N'Pháp luật đại cương', 30, 'LM1'),
-('MH013', N'Văn hóa doanh nghiệp Nhật Bản', 30, 'LM1'),
-('MH014', N'Tiếng Nhật 1', 60, 'LM1'),
-('MH015', N'Tiếng Nhật 2', 60, 'LM1'),
-('MH016', N'Tiếng Nhật 3', 60, 'LM1'),
-('MH017', N'Tiếng Nhật 4', 60, 'LM1'),
-('MH018', N'Tiếng Nhật 5', 45, 'LM1'),
-('MH019', N'Tiếng Nhật 6', 45, 'LM1'),
-('MH020', N'Tiếng Nhật 7', 45, 'LM1'),
-('MH021', N'Tiếng Nhật 8', 45, 'LM1'),
-('MH022', N'Lập trình hướng đối tượng', 45, 'LM1'),
-('MH023', N'Lập trình hướng đối tượng', 30, 'LM2'),
-('MH024', N'Cấu trúc dữ liệu và giải thuật', 45, 'LM1'),
-('MH025', N'Cơ sở dữ liệu', 45, 'LM1'),
-('MH026', N'Nhập môn mạng máy tính', 45, 'LM1'),
-('MH027', N'Nhập môn mạng máy tính', 30, 'LM2'),
-('MH028', N'Tổ chức và cấu trúc máy tính II', 45, 'LM1'),
-('MH029', N'Tổ chức và cấu trúc máy tính II', 30, 'LM2'),
-('MH030', N'Hệ điều hành', 45, 'LM1'),
-('MH031', N'Hệ điều hành', 30, 'LM2'),
-('MH032', N'Giới thiệu ngành Công nghệ Thông tin', 15, 'LM1'),
-('MH033', N'Cơ sở hạ tầng công nghệ thông tin', 45, 'LM1'),
-('MH034', N'Cơ sở hạ tầng công nghệ thông tin', 30, 'LM2'),
-('MH035', N'Quản lý thông tin', 45, 'LM1'),
-('MH036', N'Quản lý thông tin', 30, 'LM2'),
-('MH037', N'Internet và công nghệ Web', 45, 'LM1'),
-('MH038', N'Internet và công nghệ Web', 30, 'LM2'),
-('MH039', N'Thiết kế giao diện người dùng', 45, 'LM1'),
-('MH040', N'Thiết kế giao diện người dùng', 30, 'LM2'),
-('MH041', N'Nhập môn đảm bảo và an ninh thông tin', 45, 'LM1'),
-('MH042', N'Nhập môn đảm bảo và an ninh thông tin', 30, 'LM2'),
-('MH043', N'Nhập môn công nghệ phần mềm', 45, 'LM1'),
-('MH044', N'Nhập môn công nghệ phần mềm', 30, 'LM2'),
-('MH045', N'Điện toán đám mây', 45, 'LM1'),
-('MH046', N'Các chủ đề toán học cho KHDL', 45, 'LM1'),
-('MH047', N'Học máy thống kê', 45, 'LM1'),
-('MH048', N'Học máy thống kê', 30, 'LM2'),
-('MH049', N'Xử lý dữ liệu lớn', 45, 'LM1'),
-('MH050', N'Xử lý dữ liệu lớn', 30, 'LM2');
+--Table MONHOC 
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH001', N'Tư tưởng Hồ Chí Minh', 30, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH002', N'Triết học Mác – Lênin', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES('MH003', N'Kinh tế chính trị Mác – Lênin', 30, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH004', N'Chủ nghĩa xã hội khoa học', 30, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH005', N'Lịch sử Đảng Cộng sản Việt Nam', 30, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH006', N'Giải tích', 60, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH007', N'Đại số tuyến tính', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH008', N'Cấu trúc rời rạc', 60, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH009', N'Xác suất thống kê', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH010', N'Nhập môn Lập trình', 60, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH011', N'Kỹ năng nghề nghiệp', 30, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH012', N'Pháp luật đại cương', 30, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH013', N'Văn hóa doanh nghiệp Nhật Bản', 30, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH014', N'Tiếng Nhật 1', 60, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH015', N'Tiếng Nhật 2', 60, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH016', N'Tiếng Nhật 3', 60, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH017', N'Tiếng Nhật 4', 60, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH018', N'Tiếng Nhật 5', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH019', N'Tiếng Nhật 6', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH020', N'Tiếng Nhật 7', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH021', N'Tiếng Nhật 8', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH022', N'Lập trình hướng đối tượng', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH023', N'Lập trình hướng đối tượng', 30, 'LM2');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH024', N'Cấu trúc dữ liệu và giải thuật', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH025', N'Cơ sở dữ liệu', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH026', N'Nhập môn mạng máy tính', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH027', N'Nhập môn mạng máy tính', 30, 'LM2');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH028', N'Tổ chức và cấu trúc máy tính II', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH029', N'Tổ chức và cấu trúc máy tính II', 30, 'LM2');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH030', N'Hệ điều hành', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH031', N'Hệ điều hành', 30, 'LM2');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH032', N'Giới thiệu ngành Công nghệ Thông tin', 15, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH033', N'Cơ sở hạ tầng công nghệ thông tin', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH034', N'Cơ sở hạ tầng công nghệ thông tin', 30, 'LM2');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH035', N'Quản lý thông tin', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH036', N'Quản lý thông tin', 30, 'LM2');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH037', N'Internet và công nghệ Web', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH038', N'Internet và công nghệ Web', 30, 'LM2');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH039', N'Thiết kế giao diện người dùng', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH040', N'Thiết kế giao diện người dùng', 30, 'LM2');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH041', N'Nhập môn đảm bảo và an ninh thông tin', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH042', N'Nhập môn đảm bảo và an ninh thông tin', 30, 'LM2');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH043', N'Nhập môn công nghệ phần mềm', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH044', N'Nhập môn công nghệ phần mềm', 30, 'LM2');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH045', N'Điện toán đám mây', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH046', N'Các chủ đề toán học cho KHDL', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH047', N'Học máy thống kê', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH048', N'Học máy thống kê', 30, 'LM2');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH049', N'Xử lý dữ liệu lớn', 45, 'LM1');
+INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES ('MH050', N'Xử lý dữ liệu lớn', 30, 'LM2');
 
 
 --Table HOCKY_NAMHOC (12/12)
