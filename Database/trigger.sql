@@ -224,6 +224,21 @@ BEGIN
 END;
 GO
 
+-- Trigger - Ngày lập phiếu ĐKHP phải trước ngày lập phiếu thu cho phiếu đăng ký đó
+CREATE TRIGGER TRIG_ISUD_PHIEUTHU_NGAYLAP
+ON PHIEUTHUHP FOR INSERT, UPDATE
+AS
+BEGIN
+	IF EXISTS (SELECT 1 FROM inserted i 
+				JOIN PHIEUDKHP pdk ON pdk.MaPhieuDKHP = i.MaPhieuDKHP
+				WHERE i.NgayLap > pdk.NgayLap)
+    BEGIN
+        RAISERROR ('Ngày lập phiếu ĐKHP phải trước ngày lập phiếu thu cho phiếu đăng ký đó!', 16, 1)
+        ROLLBACK TRANSACTION
+    END
+END;
+GO
+
 -- Trigger - Số tiền thu không được vượt quá số tiền còn lại
 CREATE TRIGGER TRIG_ISUD_PHIEUTHUHP_SOTIENTHU_SOTIENCONLAI
 ON PHIEUTHUHP FOR INSERT, UPDATE
