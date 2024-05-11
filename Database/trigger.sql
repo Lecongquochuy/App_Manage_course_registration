@@ -250,3 +250,18 @@ BEGIN
         ROLLBACK TRANSACTION
     END
 END;
+
+--Trigger - Trong cùng một học kỳ năm học sinh viên chỉ có một phiếu ĐKHP
+CREATE TRIGGER TRIG_ISUD_PHIEUDKHP_MSSV_MAHKNH
+ON PHIEUDKHP FOR INSERT, UPDATE
+AS
+BEGIN
+    IF EXISTS (SELECT COUNT(MaPhieuDKHP)
+				FROM PHIEUDKHP
+				where COUNT(MaPhieuDKHP) > 1
+				GROUP BY MSSV, MaHKNH)
+    BEGIN
+        RAISERROR ('Chỉ được đăng ký các môn học được mở trong cùng học kỳ năm học!', 16, 1)
+        ROLLBACK TRANSACTION
+    END
+END;
