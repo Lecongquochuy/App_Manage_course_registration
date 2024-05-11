@@ -247,60 +247,60 @@ INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
 --Table SINHVIEN (0/50+)
 SET DATEFORMAT DMY
 INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALUES
-('21522145', N'Lê Công Quốc Huy', '--2003', N'Nam', '', 'DT001', 'K02N01'),
-('21522146', N'Lê Gia Huy', , N'Nam', , 'DT001', 'K02N01'),
-('21522141', N'Hoàng Gia Huy', , N'Nam', , 'DT001', 'K02N01'),
-('21522676', N'Nguyễn Thành Tín', , N'Nam', , 'DT001', 'K02N01'),
-('21521667', N'Phan Vỹ Văn', , N'Nam', , 'DT001', 'K02N01'),
-('20521062', N'Dương Thị Ngọc Anh', , N'Nữ', , , ),
-('20521061', N'Đỗ Trần Mai Anh', , N'Nữ', , , ),
-('21520138', N'Lê Nguyễn Nhật Anh', , N'Nữ', , , ),
-('20520900', N'Nguyễn Ngọc Mai Khanh', , N'Nữ', , , ),
-('21522315', N'Nguyễn Thị Cẩm Ly', , N'Nữ', , , ),
+('21522145', N'Lê Công Quốc Huy', '--2003', N'Nam', 'T0H0', 'DT001', 'K02N01'),
+('21522146', N'Lê Gia Huy', '--2003', N'Nam', 'T0H0', 'DT001', 'K02N01'),
+('21522141', N'Hoàng Gia Huy', '--2003', N'Nam', 'T0H0', 'DT001', 'K02N01'),
+('21522676', N'Nguyễn Thành Tín', '--2003', N'Nam', 'T0H0', 'DT001', 'K02N01'),
+('21521667', N'Phan Vỹ Văn', '7-6-2003', N'Nam', 'T0H0', 'DT001', 'K02N01'),
+('20521062', N'Dương Thị Ngọc Anh', '--2002', N'Nữ', 'T0H0', 'DT001', 'K0N0'),
+('20521061', N'Đỗ Trần Mai Anh', '--2002', N'Nữ', 'T0H0', 'DT001', 'K0N0'),
+('21520138', N'Lê Nguyễn Nhật Anh', '--2003', N'Nữ', 'T0H0', 'DT001', 'K0N0'),
+('20520900', N'Nguyễn Ngọc Mai Khanh', '--2002', N'Nữ', 'T0H0', 'DT001', 'K0N0'),
+('21522315', N'Nguyễn Thị Cẩm Ly', '--2003', N'Nữ', 'T0H0', 'DT001', 'K0N0'),
 
-('21521140', N'Nguyễn Tuệ Minh', , N'Nữ', , , ),
-('21521144', N'Trần Tuyết Minh', , N'Nữ', , , ),
-('21521174', N'Nguyễn Thị Kim Ngân', , N'Nữ', , , ),
-('21522884', N'Nguyễn Bích Phượng', , N'Nữ', , , ),
-('21521486', N'Bùi Thị Anh Thư', , N'Nữ', , , ),
-('21522698', N'Phan Huỳnh Thiên Trang', , N'Nữ', , , ),
-('21521804', N'Hồ Vũ An', , N'Nam', , , ),
-('21521846', N'Huỳnh Hải Băng', , N'Nam', , , ),
-('21521156', N'Đoàn Lê Giang Nam', , N'Nam', , , ),
-('21521178', N'Trần Thanh Nghị', , N'Nam', , , ),
+('21521140', N'Nguyễn Tuệ Minh', '--2003', N'Nữ', 'T0H0', 'DT001', 'K0N0'),
+('21521144', N'Trần Tuyết Minh', '--2003', N'Nữ', 'T0H0', 'DT001', 'K0N0'),
+('21521174', N'Nguyễn Thị Kim Ngân', '--2003', N'Nữ', 'T0H0', 'DT001', 'K0N0'),
+('21522884', N'Nguyễn Bích Phượng', '--2003', N'Nữ', 'T0H0', 'DT001', 'K0N0'),
+('21521486', N'Bùi Thị Anh Thư', '--2003', N'Nữ', 'T0H0', 'DT001', 'K0N0'),
+('21522698', N'Phan Huỳnh Thiên Trang', '--2003', N'Nữ', 'T0H0', 'DT001', 'K0N0'),
+('21521804', N'Hồ Vũ An', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21521846', N'Huỳnh Hải Băng', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21521156', N'Đoàn Lê Giang Nam', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21521178', N'Trần Thanh Nghị', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
 
-('21521180', N'Lê Đức Nghĩa', , N'Nam', , , ),
-('21521183', N'Nguyễn Thành Nghĩa', , N'Nam', , , ),
-('21521201', N'Nguyễn Đỗ Đức Nguyên', , N'Nam', , , ),
-('21521226', N'Nguyễn Minh Nhật', , N'Nam', , , ),
-('21521268', N'Nguyễn Thành Phi', , N'Nam', , , ),
-('21521271', N'Lê Thanh Phong', , N'Nam', , , ),
-('21521323', N'Dương Uy Quan', , N'Nam', , , ),
-('21521595', N'Nguyễn Thành Trung', , N'Nam', , , ),
-('21522747', N'Trịnh Tuấn Tú', , N'Nam', , , ),
-('21522755', N'Nguyễn Mạnh Tuấn', , N'Nam', , , ),
+('21521180', N'Lê Đức Nghĩa', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21521183', N'Nguyễn Thành Nghĩa', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21521201', N'Nguyễn Đỗ Đức Nguyên', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21521226', N'Nguyễn Minh Nhật', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21521268', N'Nguyễn Thành Phi', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21521271', N'Lê Thanh Phong', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21521323', N'Dương Uy Quan', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21521595', N'Nguyễn Thành Trung', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21522747', N'Trịnh Tuấn Tú', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21522755', N'Nguyễn Mạnh Tuấn', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
 
-('21520389', N'Phan Cả Phát', , N'Nam', , , ),
-('21522496', N'Nguyễn Minh Quân', , N'Nam', , , ),
-('21522515', N'Nguyễn Việt Quang', , N'Nam', , , ),
-('21522528', N'Dương Văn Quy', , N'Nam', , , ),
-('21522544', N'Nguyễn Ngọc Thanh Sang', , N'Nam', , , ),
-('21522556', N'Phạm Thanh Sơn', , N'Nam', , , ),
-('21521476', N'Vũ Ngọc Trường Thịnh', , N'Nam', , , ),
-('21522681', N'Phạm Đăng Tỉnh', , N'Nam', , , ),
-('21522712', N'Phạm Minh Triết', , N'Nam', , , ),
-('21522732', N'Lê Quang Trường', , N'Nam', , , ),
+('21520389', N'Phan Cả Phát', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21522496', N'Nguyễn Minh Quân', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21522515', N'Nguyễn Việt Quang', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21522528', N'Dương Văn Quy', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21522544', N'Nguyễn Ngọc Thanh Sang', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21522556', N'Phạm Thanh Sơn', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21521476', N'Vũ Ngọc Trường Thịnh', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21522681', N'Phạm Đăng Tỉnh', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21522712', N'Phạm Minh Triết', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
+('21522732', N'Lê Quang Trường', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0'),
 
-('21522762', N'Trần Anh Tuấn', , N'Nam', , , )
-('21522885', N'Phan Thị Cát Tường', , N'Nữ', , , )
-('21522536', N'Nguyễn Phan Trúc Quỳnh', , N'Nữ', , , )
-('21522357', N'Lê Hải Nam', , N'Nam', , , )
-('21521108', N'Nguyễn Minh Lý', , N'Nam', , , )
-('21522276', N'Nguyễn Cao Lãm', , N'Nam', , , )
-('21522168', N'Trần Minh Huy', , N'Nam', , , )
-('21522037', N'Trần Thị Hải', , N'Nữ', , , )
-('21521029', N'Tô Quốc Kiện', , N'Nam', , , )
-('21522055', N'Phan Công Hậu', , N'Nam', , , );
+('21522762', N'Trần Anh Tuấn', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0')
+('21522885', N'Phan Thị Cát Tường', '--2003', N'Nữ', 'T0H0', 'DT001', 'K0N0')
+('21522536', N'Nguyễn Phan Trúc Quỳnh', '--2003', N'Nữ', 'T0H0', 'DT001', 'K0N0')
+('21522357', N'Lê Hải Nam', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0')
+('21521108', N'Nguyễn Minh Lý', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0')
+('21522276', N'Nguyễn Cao Lãm', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0')
+('21522168', N'Trần Minh Huy', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0')
+('21522037', N'Trần Thị Hải', '--2003', N'Nữ', 'T0H0', 'DT001', 'K0N0')
+('21521029', N'Tô Quốc Kiện', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0')
+('21522055', N'Phan Công Hậu', '--2003', N'Nam', 'T0H0', 'DT001', 'K0N0');
 
 --Table LOAIMON (2/2)
 INSERT INTO LOAIMON (MaLoaiMon, TenLoaiMon, SoTietMotTC, SoTienMotTC) VALUES
