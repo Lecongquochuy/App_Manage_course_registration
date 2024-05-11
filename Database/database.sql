@@ -260,8 +260,6 @@ INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALU
 ('21520138', N'Lê Nguyễn Nhật Anh', '16-8-2003', N'Nữ', 'T10H04', 'DT001', 'K01N01'),
 ('20520900', N'Nguyễn Ngọc Mai Khanh', '11-11-2002', N'Nữ', 'T01H03', 'DT001', 'K06N02'),
 ('21522315', N'Nguyễn Thị Cẩm Ly', '14-2-2003', N'Nữ', 'T09H01', 'DT007', 'K02N01'),
-
---T7 H2345 DT4
     
 ('21521140', N'Nguyễn Tuệ Minh', '25-11-2003', N'Nữ', 'T02H03', 'DT001', 'K04N01'),
 ('21521144', N'Trần Tuyết Minh', '22-5-2003', N'Nữ', 'T03H05', 'DT001', 'K04N01'),
