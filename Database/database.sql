@@ -224,29 +224,29 @@ INSERT INTO DTUUTIEN (MaDT, TenDT, TiLeGiam) VALUES
 
 -- Table KHOA (6/5)
 INSERT INTO KHOA (MaKhoa, TenKhoa) VALUES
-(K01, N'Khoa học máy tính'),
-(K02, N'Khoa học và Kỹ thuật thông tin'),
-(K03, N'Kỹ thuật máy tính'),
-(K04, N'Công nghệ phần mềm'),
-(K05, N'Hệ thống thông tin'),
-(K06, N'Mạng máy tính và truyền thông');
+('K01', N'Khoa học máy tính'),
+('K02', N'Khoa học và Kỹ thuật thông tin'),
+('K03', N'Kỹ thuật máy tính'),
+('K04', N'Công nghệ phần mềm'),
+('K05', N'Hệ thống thông tin'),
+('K06', N'Mạng máy tính và truyền thông');
 
 --Table NGANHHOC (10/10)
 INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
-(K01N01, N'Khoa học Máy tính', K01),
-(K01N02, N'Trí tuệ nhân tạo', K01),
-(K02N01, N'Công nghệ Thông tin', K02),
-(K02N02, N'Khoa học Dữ liệu', K02),
-(K03N01, N'Kỹ thuật Máy tính', K03),
-(K04N01, N'Kỹ thuật Phần mềm', K04),
-(K05N01, N'Hệ thống Thông tin', K05),
-(K05N02, N'Thương mại điện tử', K05),
-(K06N01, N'Mạng máy tính và Truyền thông dữ liệu', K06),
-(K06N02, N'An toàn Thông tin', K06);
+('K01N01', N'Khoa học Máy tính', 'K01'),
+('K01N02', N'Trí tuệ nhân tạo', 'K01'),
+('K02N01', N'Công nghệ Thông tin', 'K02'),
+('K02N02', N'Khoa học Dữ liệu', 'K02'),
+('K03N01', N'Kỹ thuật Máy tính', 'K03'),
+('K04N01', N'Kỹ thuật Phần mềm', 'K04'),
+('K05N01', N'Hệ thống Thông tin', 'K05'),
+('K05N02', N'Thương mại điện tử', 'K05'),
+('K06N01', N'Mạng máy tính và Truyền thông dữ liệu', K06),
+('K06N02', N'An toàn Thông tin', 'K06');
 
 --Table SINHVIEN (0/50+)
 INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALUES
-(21522145, N'Lê Công Quốc Huy', , N'Nam', , DT001, K02N01),
+(21522145, N'Lê Công Quốc Huy', , N'Nam', , 'DT001', 'K02N01'),
 (21522146, N'Lê Gia Huy', , N'Nam', , DT001, K02N01),
 (21522141, N'Hoàng Gia Huy', , N'Nam', , DT001, K02N01),
 (21522676, N'Nguyễn Thành Tín', , N'Nam', , DT001, K02N01),
@@ -303,8 +303,8 @@ INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALU
 
 --Table LOAIMON (2/2)
 INSERT INTO LOAIMON (MaLoaiMon, TenLoaiMon, SoTietMotTC, SoTienMotTC) VALUES
-(LM1, N'Lý thuyết', 15, 27000),
-(LM2, N'Thực hành', 30, 37000);
+('LM1', N'Lý thuyết', 15, 27000),
+('LM2', N'Thực hành', 30, 37000);
 
 --Table MONHOC (0/50)
 INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES
@@ -363,18 +363,18 @@ INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES
 --Table HOCKY_NAMHOC (12/12)
 SET DATEFORMAT DMY
 INSERT INTO HOCKY_NAMHOC (MaHKNH, HocKy, NamHoc, ThoiHanDongHocPhi) VALUES
-(0118, 1, 20182019, ),
-(0218, 2, 20182019, ),
-(0119, 1, 20192020, ),
-(0219, 2, 20192020, ),
-(0120, 1, 20202021, ),
-(0220, 2, 20202021, ),
-(0121, 1, 20212022, ),
-(0221, 2, 20212022, ),
-(0122, 1, 20222023, 28/8/2022),
-(0222, 2, 20222023, 12/2/2023),
-(0123, 1, 20232024, 7/9/2023),
-(0223, 2, 20232024, 31/1/2024);
+('1801', 1, '2018', '25/8/2018'),
+('1802', 2, '2018', '31/1/2019'),
+('1901', 1, '2019', '19/8/2019'),
+('1902', 2, '2019', '10/2/2020'),
+('2001', 1, '2020', '29/8/2020'),
+('2020', 2, '2020', '19/2/2021'),
+('2101', 1, '2021', '21/8/2021'),
+('2102', 2, '2021', '8/2/2022'),
+('2201', 1, '2022', '28/8/2022'),
+('2202', 2, '2022', '12/2/2023'),
+('2301', 1, '2023', '7/9/2023'),
+('2302', 2, '2023', '31/1/2024');
 
 --Table BCCHUADONGHP (0/60)
 INSERT INTO BCCHUADONGHP (MaHKNM, MSSV) VALUES
