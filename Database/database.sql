@@ -245,12 +245,13 @@ INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
 ('K06N02', N'An toàn Thông tin', 'K06');
 
 --Table SINHVIEN (0/50+)
+SET DATEFORMAT DMY
 INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALUES
-('21522145', N'Lê Công Quốc Huy', , N'Nam', , 'DT001', 'K02N01'),
-('21522146', N'Lê Gia Huy', , N'Nam', , DT001, K02N01),
-('21522141', N'Hoàng Gia Huy', , N'Nam', , DT001, K02N01),
-('21522676', N'Nguyễn Thành Tín', , N'Nam', , DT001, K02N01),
-('21521667', N'Phan Vỹ Văn', , N'Nam', , DT001, K02N01),
+('21522145', N'Lê Công Quốc Huy', '--2003', N'Nam', '', 'DT001', 'K02N01'),
+('21522146', N'Lê Gia Huy', , N'Nam', , 'DT001', 'K02N01'),
+('21522141', N'Hoàng Gia Huy', , N'Nam', , 'DT001', 'K02N01'),
+('21522676', N'Nguyễn Thành Tín', , N'Nam', , 'DT001', 'K02N01'),
+('21521667', N'Phan Vỹ Văn', , N'Nam', , 'DT001', 'K02N01'),
 ('20521062', N'Dương Thị Ngọc Anh', , N'Nữ', , , ),
 ('20521061', N'Đỗ Trần Mai Anh', , N'Nữ', , , ),
 ('21520138', N'Lê Nguyễn Nhật Anh', , N'Nữ', , , ),
@@ -363,20 +364,20 @@ INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES
 --Table HOCKY_NAMHOC (12/12)
 SET DATEFORMAT DMY
 INSERT INTO HOCKY_NAMHOC (MaHKNH, HocKy, NamHoc, ThoiHanDongHocPhi) VALUES
-('2001', 1, '2020', '29/8/2020'),
-('2002', 2, '2020', '19/2/2021'),
-('2003', 3, '2020', '10/7/2021'),
-('2101', 1, '2021', '21/8/2021'),
-('2102', 2, '2021', '8/2/2022'),
-('2103', 3, '2021', '12/7/2022'),
-('2201', 1, '2022', '28/8/2022'),
-('2202', 2, '2022', '12/2/2023'),
-('2203', 3, '2022', '26/7/2023'),
-('2301', 1, '2023', '7/9/2023'),
-('2302', 2, '2023', '31/1/2024'),
-('2303', 3, '2023', '3/7/2024');
+('2001', 1, '2020', '29-8-2020'),
+('2002', 2, '2020', '19-2-2021'),
+('2003', 3, '2020', '10-7-2021'),
+('2101', 1, '2021', '21-8-2021'),
+('2102', 2, '2021', '8-2-2022'),
+('2103', 3, '2021', '12-7-2022'),
+('2201', 1, '2022', '28-8-2022'),
+('2202', 2, '2022', '12-2-2023'),
+('2203', 3, '2022', '26-7-2023'),
+('2301', 1, '2023', '7-9-2023'),
+('2302', 2, '2023', '31-1-2024'),
+('2303', 3, '2023', '3-7-2024');
 
 --Table BCCHUADONGHP (0/60)
-INSERT INTO BCCHUADONGHP (MaHKNM, MSSV) VALUES
-(, ),
-(, );
+INSERT INTO BCCHUADONGHP (MaHKNH, MSSV) VALUES
+('', ''),
+('', '');
