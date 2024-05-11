@@ -214,13 +214,16 @@ INSERT INTO HUYEN (MaHuyen, TenHuyen, MaTinh, VungSauVungXa) VALUES
 ('T10H04', N'Đakrông', 'T10', 0),
 ('T10H05', N'Vĩnh Linh', 'T10', 0);
 
---Table DTUUTIEN (0/10)
+--Table DTUUTIEN (8/10)
 INSERT INTO DTUUTIEN (MaDT, TenDT, TiLeGiam) VALUES
 ('DT001', N'Không đối tượng', 0),
 ('DT002', N'Con liệt sĩ', 0.8),
 ('DT003', N'Con thương binh', 0.5),
 ('DT004', N'Vùng sâu vùng xa', 0.3),
-('', N'', );
+('DT005', N'Mồ côi', 0.8),
+('DT006', N'Khuyết tật', 0.5),
+('DT007', N'Hộ nghèo', 0.5)
+('DT008', N'Dân tộc thiểu số', 0.3);
 
 -- Table KHOA (6/5)
 INSERT INTO KHOA (MaKhoa, TenKhoa) VALUES
@@ -244,15 +247,9 @@ INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
 ('K06N01', N'Mạng máy tính và Truyền thông dữ liệu', 'K06'),
 ('K06N02', N'An toàn Thông tin', 'K06');
 
---Table SINHVIEN (0/50+)
+--Table SINHVIEN (50/50+)
 SET DATEFORMAT DMY
 INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALUES
--- Random
--- Ngay 1-31 (T4, 6, 9, 11: 30N; T2: 28, 29N)
--- Thang 1-12
--- MaHuyen T1-10 H1-5
--- MaDT 2-10
--- MaNH K1-6 N1-2 (K3, 4: N1)
 ('21522145', N'Lê Công Quốc Huy', '4-2-2003', N'Nam', 'T05H01', 'DT001', 'K02N01'),
 ('21522146', N'Lê Gia Huy', '10-1-2003', N'Nam', 'T06H05', 'DT001', 'K02N01'),
 ('21522141', N'Hoàng Gia Huy', '7-3-2003', N'Nam', 'T09H05', 'DT001', 'K02N01'),
@@ -262,28 +259,28 @@ INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALU
 ('20521061', N'Đỗ Trần Mai Anh', '31-5-2002', N'Nữ', 'T03H04', 'DT001', 'K03N01'),
 ('21520138', N'Lê Nguyễn Nhật Anh', '16-8-2003', N'Nữ', 'T10H04', 'DT001', 'K01N01'),
 ('20520900', N'Nguyễn Ngọc Mai Khanh', '11-11-2002', N'Nữ', 'T01H03', 'DT001', 'K06N02'),
-('21522315', N'Nguyễn Thị Cẩm Ly', '14-2-2003', N'Nữ', 'T09H01', 'DT001', 'K02N01'),
+('21522315', N'Nguyễn Thị Cẩm Ly', '14-2-2003', N'Nữ', 'T09H01', 'DT007', 'K02N01'),
 
 ('21521140', N'Nguyễn Tuệ Minh', '25-11-2003', N'Nữ', 'T02H03', 'DT001', 'K04N01'),
 ('21521144', N'Trần Tuyết Minh', '22-5-2003', N'Nữ', 'T03H05', 'DT001', 'K04N01'),
-('21521174', N'Nguyễn Thị Kim Ngân', '8-5-2003', N'Nữ', 'T08H05', 'DT001', 'K05N01'),
+('21521174', N'Nguyễn Thị Kim Ngân', '8-5-2003', N'Nữ', 'T08H05', 'DT007', 'K05N01'),
 ('21522884', N'Nguyễn Bích Phượng', '10-7-2003', N'Nữ', 'T02H04', 'DT001', 'K06N01'),
 ('21521486', N'Bùi Thị Anh Thư', '16-10-2003', N'Nữ', 'T07H03', 'DT001', 'K06N01'),
 ('21522698', N'Phan Huỳnh Thiên Trang', '15-2-2003', N'Nữ', 'T04H02', 'DT001', 'K01N01'),
 ('21521804', N'Hồ Vũ An', '6-10-2003', N'Nam', 'T03H05', 'DT001', 'K05N01'),
 ('21521846', N'Huỳnh Hải Băng', '1-7-2003', N'Nam', 'T10H05', 'DT001', 'K01N02'),
 ('21521156', N'Đoàn Lê Giang Nam', '26-10-2003', N'Nam', 'T04H05', 'DT001', 'K02N02'),
-('21521178', N'Trần Thanh Nghị', '29-8-2003', N'Nam', 'T09H05', 'DT001', 'K04N01'),
+('21521178', N'Trần Thanh Nghị', '29-8-2003', N'Nam', 'T09H05', 'DT002', 'K04N01'),
 
 ('21521180', N'Lê Đức Nghĩa', '18-1-2003', N'Nam', 'T04H04', 'DT001', 'K02N02'),
-('21521183', N'Nguyễn Thành Nghĩa', '6-8-2003', N'Nam', 'T02H05', 'DT001', 'K04N01'),
+('21521183', N'Nguyễn Thành Nghĩa', '6-8-2003', N'Nam', 'T02H05', 'DT003', 'K04N01'),
 ('21521201', N'Nguyễn Đỗ Đức Nguyên', '27-3-2003', N'Nam', 'T04H04', 'DT001', 'K05N02'),
 ('21521226', N'Nguyễn Minh Nhật', '9-4-2003', N'Nam', 'T10H01', 'DT001', 'K02N01'),
 ('21521268', N'Nguyễn Thành Phi', '21-9-2003', N'Nam', 'T09H05', 'DT001', 'K01N02'),
 ('21521271', N'Lê Thanh Phong', '11-10-2003', N'Nam', 'T10H03', 'DT001', 'K01N02'),
 ('21521323', N'Dương Uy Quan', '17-4-2003', N'Nam', 'T05H02', 'DT001', 'K05N02'),
 ('21521595', N'Nguyễn Thành Trung', '21-11-2003', N'Nam', 'T03H04', 'DT001', 'K06N01'),
-('21522747', N'Trịnh Tuấn Tú', '15-6-2003', N'Nam', 'T09H04', 'DT001', 'K03N01'),
+('21522747', N'Trịnh Tuấn Tú', '15-6-2003', N'Nam', 'T09H04', 'DT008', 'K03N01'),
 ('21522755', N'Nguyễn Mạnh Tuấn', '4-3-2003', N'Nam', 'T09H01', 'DT001', 'K04N01'),
 
 ('21520389', N'Phan Cả Phát', '23-11-2003', N'Nam', 'T01H01', 'DT001', 'K01N01'),
@@ -313,7 +310,7 @@ INSERT INTO LOAIMON (MaLoaiMon, TenLoaiMon, SoTietMotTC, SoTienMotTC) VALUES
 ('LM1', N'Lý thuyết', 15, 27000),
 ('LM2', N'Thực hành', 30, 37000);
 
---Table MONHOC (0/50)
+--Table MONHOC (50/50)
 INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES
 ('MH001', N'Tư tưởng Hồ Chí Minh', 30, 'LM1'),
 ('MH002', N'Triết học Mác – Lênin', 45, 'LM1'),
@@ -370,18 +367,18 @@ INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES
 --Table HOCKY_NAMHOC (12/12)
 SET DATEFORMAT DMY
 INSERT INTO HOCKY_NAMHOC (MaHKNH, HocKy, NamHoc, ThoiHanDongHocPhi) VALUES
-('2001', 1, '2020', '29-8-2020'),
-('2002', 2, '2020', '19-2-2021'),
-('2003', 3, '2020', '10-7-2021'),
-('2101', 1, '2021', '21-8-2021'),
-('2102', 2, '2021', '8-2-2022'),
-('2103', 3, '2021', '12-7-2022'),
-('2201', 1, '2022', '28-8-2022'),
-('2202', 2, '2022', '12-2-2023'),
-('2203', 3, '2022', '26-7-2023'),
-('2301', 1, '2023', '7-9-2023'),
-('2302', 2, '2023', '31-1-2024'),
-('2303', 3, '2023', '3-7-2024');
+('2001', 1, 2020, '29-8-2020'),
+('2002', 2, 2020, '19-2-2021'),
+('2003', 3, 2020, '10-7-2021'),
+('2101', 1, 2021, '21-8-2021'),
+('2102', 2, 2021, '8-2-2022'),
+('2103', 3, 2021, '12-7-2022'),
+('2201', 1, 2022, '28-8-2022'),
+('2202', 2, 2022, '12-2-2023'),
+('2203', 3, 2022, '26-7-2023'),
+('2301', 1, 2023, '7-9-2023'),
+('2302', 2, 2023, '31-1-2024'),
+('2303', 3, 2023, '3-7-2024');
 
 --Table BCCHUADONGHP (0/60)
 INSERT INTO BCCHUADONGHP (MaHKNH, MSSV) VALUES
