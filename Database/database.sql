@@ -247,6 +247,12 @@ INSERT INTO NGANHHOC (MaNH, TenNH, MaKhoa) VALUES
 --Table SINHVIEN (0/50+)
 SET DATEFORMAT DMY
 INSERT INTO SINHVIEN (MSSV, HoTen, NgaySinh, GioiTinh, MaHuyen, MaDT, MaNH) VALUES
+-- Random
+-- Ngay 1-31 (T4, 6, 9, 11: 30N; T2: 28, 29N)
+-- Thang 1-12
+-- MaHuyen T1-10 H1-5
+-- MaDT 2-10
+-- MaNH K1-6 N1-2 (K3, 4: N1)
 ('21522145', N'Lê Công Quốc Huy', '--2003', N'Nam', 'T0H0', 'DT001', 'K02N01'),
 ('21522146', N'Lê Gia Huy', '--2003', N'Nam', 'T0H0', 'DT001', 'K02N01'),
 ('21522141', N'Hoàng Gia Huy', '--2003', N'Nam', 'T0H0', 'DT001', 'K02N01'),
