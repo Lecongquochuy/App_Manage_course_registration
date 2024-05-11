@@ -363,12 +363,6 @@ INSERT INTO MONHOC (MaMH, TenMH, SoTiet, MaLoaiMon) VALUES
 --Table HOCKY_NAMHOC (12/12)
 SET DATEFORMAT DMY
 INSERT INTO HOCKY_NAMHOC (MaHKNH, HocKy, NamHoc, ThoiHanDongHocPhi) VALUES
-('1801', 1, '2018', '25/8/2018'),
-('1802', 2, '2018', '31/1/2019'),
-('1803', 3, '2018', '7/7/2019'),
-('1901', 1, '2019', '19/8/2019'),
-('1902', 2, '2019', '10/2/2020'),
-('1903', 3, '2019', '15/7/2020'),
 ('2001', 1, '2020', '29/8/2020'),
 ('2002', 2, '2020', '19/2/2021'),
 ('2003', 3, '2020', '10/7/2021'),
