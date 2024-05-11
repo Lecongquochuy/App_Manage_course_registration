@@ -88,6 +88,20 @@ BEGIN
 	WHERE MaMH = @MaMH
 END;
 GO
+
+-- Trigger - Khởi tạo giá trị 0 cho Phiếu ĐKHP
+CREATE TRIGGER TRIG_IS_PHIEUDKHP_TONGTIEN
+ON PHIEUDKHP FOR INSERT
+AS
+BEGIN
+	DECLARE @MaPhieuDKHP VARCHAR(8)
+	SELECT @MaPhieuDKHP = MaPhieuDKHP FROM inserted
+
+	UPDATE PHIEUDKHP
+    SET TongTien = 0, SoTienPhaiDong = 0, SoTienDaDong = 0, SoTienConLai = 0
+	WHERE MaPhieuDKHP = @MaPhieuDKHP
+END;
+GO
 -- Trigger - Tự động tính tổng tiền
 CREATE TRIGGER TRIG_ISUDDL_CT_DKHP_TINHTONGTIEN
 ON CT_DKHP FOR INSERT, UPDATE, DELETE
@@ -136,26 +150,35 @@ ON PHIEUDKHP FOR UPDATE
 AS
 BEGIN
 	DECLARE @MaPhieuDK VARCHAR(8)
+	DECLARE @SoTienPhaiDong MONEY
+
 	SELECT @MaPhieuDK = MaPhieuDKHP FROM inserted
 
+	SELECT @SoTienPhaiDong = pdkhp.TongTien * (1 - dtut.TiLeGiam)
+	FROM PHIEUDKHP pdkhp 
+	JOIN SINHVIEN sv ON pdkhp.MSSV = sv.MSSV
+	JOIN DTUUTIEN dtut ON sv.MaDT = dtut.MaDT
+	WHERE pdkhp.MaPhieuDKHP = @MaPhieuDK
+
 	UPDATE PHIEUDKHP
-    SET SoTienPhaiDong = (SELECT pdkhp.TongTien * (1 - dtut.TiLeGiam)
-                          FROM PHIEUDKHP pdkhp 
-						  JOIN SINHVIEN sv ON pdkhp.MSSV = sv.MSSV
-						  JOIN DTUUTIEN dtut ON sv.MaDT = dtut.MaDT
-                          WHERE pdkhp.MaPhieuDKHP = @MaPhieuDK)
+    SET SoTienPhaiDong = @SoTienPhaiDong,
+		SoTienConLai = SoTienConLai - (SoTienPhaiDong - @SoTienPhaiDong)
     WHERE MaPhieuDKHP = @MaPhieuDK
 END;
 GO
+
 CREATE TRIGGER TRIG_UD_DTUUTIEN_TINHSOTIENPHAIDONG 
 ON DTUUTIEN FOR UPDATE -- TiLeGiam
 AS
 BEGIN
 	DECLARE @MaDT VARCHAR(8)
+	DECLARE @SoTienPhaiDong MONEY
+
 	SELECT @MaDT = MaDT FROM inserted
 
 	UPDATE PHIEUDKHP
-    SET SoTienPhaiDong = TEMP.NewSoTienPhaiDong
+    SET SoTienPhaiDong = TEMP.NewSoTienPhaiDong,
+		SoTienConLai = SoTienConLai - (SoTienPhaiDong - TEMP.NewSoTienPhaiDong)
 	FROM PHIEUDKHP
     JOIN (SELECT MaPhieuDKHP, pdkhp.TongTien * (1 - dtut.TiLeGiam) AS NewSoTienPhaiDong
 			FROM PHIEUDKHP pdkhp 
@@ -179,7 +202,7 @@ BEGIN
 
 		UPDATE PHIEUDKHP
 		SET SoTienDaDong = SoTienDaDong + @SoTienThu,
-			SoTienConLai = SoTienPhaiDong - (SoTienDaDong + @SoTienThu)
+			SoTienConLai = SoTienConLai - @SoTienThu
 		WHERE MaPhieuDKHP = @MaPhieuDKHP
     END
 
@@ -189,7 +212,7 @@ BEGIN
 
 		UPDATE PHIEUDKHP
 		SET SoTienDaDong = SoTienDaDong - @SoTienThu,
-			SoTienConLai = SoTienPhaiDong - (SoTienDaDong - @SoTienThu)
+			SoTienConLai = SoTienConLai + @SoTienThu
 		WHERE MaPhieuDKHP = @MaPhieuDKHP
     END
 END;
