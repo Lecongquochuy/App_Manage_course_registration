@@ -16,6 +16,10 @@ ADD CONSTRAINT CEK_LM_TENLOAIMON CHECK (TenLoaiMon IN ('Lý thuyết', 'Thực h
 ALTER TABLE CT_NGANH
 ADD CONSTRAINT CEK_CTN_HOCKY CHECK (HocKy IN (1, 2, 3, 4, 5, 6, 7, 8));
 
+-- Unique
+ALTER TABLE DSMHMO
+ADD CONSTRAINT UNQ_DSMM_HKNH_MH UNIQUE (MaHKNH, MaMH);
+
 -- Trigger - xóa một phiếu DKHP sẽ xóa các thông tin liên quan.
 CREATE TRIGGER TRIG_DL_PHIEUDKHP
 ON PHIEUDKHP INSTEAD OF DELETE
@@ -245,21 +249,6 @@ BEGIN
 	JOIN inserted i ON DSMM.MaMo = i.MaMo
 
     IF (@MaHKNH1 <> @MaHKNH2)
-    BEGIN
-        RAISERROR ('Chỉ được đăng ký các môn học được mở trong cùng học kỳ năm học!', 16, 1)
-        ROLLBACK TRANSACTION
-    END
-END;
-
---Trigger - Trong cùng một học kỳ năm học sinh viên chỉ có một phiếu ĐKHP
-CREATE TRIGGER TRIG_ISUD_PHIEUDKHP_MSSV_MAHKNH
-ON PHIEUDKHP FOR INSERT, UPDATE
-AS
-BEGIN
-    IF EXISTS (SELECT COUNT(MaPhieuDKHP)
-				FROM PHIEUDKHP
-				where COUNT(MaPhieuDKHP) > 1
-				GROUP BY MSSV, MaHKNH)
     BEGIN
         RAISERROR ('Chỉ được đăng ký các môn học được mở trong cùng học kỳ năm học!', 16, 1)
         ROLLBACK TRANSACTION
