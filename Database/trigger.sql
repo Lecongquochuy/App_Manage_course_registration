@@ -116,11 +116,10 @@ BEGIN
 		SELECT @MaPhieuDKHP = MaPhieuDKHP, @MaMo = MaMo FROM inserted
 
 		SELECT @GiaTien = mh.SoTC * lm.SoTienMotTC
-		FROM CT_DKHP ctdkhp
-		JOIN DSMHMO mhmo ON ctdkhp.MaMo = mhmo.MaMo
+		FROM DSMHMO mhmo
 		JOIN MONHOC mh ON mhmo.MaMH = mh.MaMH
 		JOIN LOAIMON lm ON lm.MaLoaiMon = mh.MaLoaiMon
-		WHERE ctdkhp.MaPhieuDKHP = @MaPhieuDKHP AND ctdkhp.MaMo = @MaMo
+		WHERE mhmo.MaMo = @MaMo
 
 		UPDATE PHIEUDKHP
 		SET TongTien = TongTien + @GiaTien
@@ -132,18 +131,18 @@ BEGIN
 		SELECT @MaPhieuDKHP = MaPhieuDKHP, @MaMo = MaMo FROM deleted
 
 		SELECT @GiaTien = mh.SoTC * lm.SoTienMotTC
-		FROM CT_DKHP ctdkhp
-		JOIN DSMHMO mhmo ON ctdkhp.MaMo = mhmo.MaMo
+		FROM DSMHMO mhmo
 		JOIN MONHOC mh ON mhmo.MaMH = mh.MaMH
 		JOIN LOAIMON lm ON lm.MaLoaiMon = mh.MaLoaiMon
-		WHERE ctdkhp.MaPhieuDKHP = @MaPhieuDKHP AND ctdkhp.MaMo = @MaMo
-
+		WHERE mhmo.MaMo = @MaMo
+		
 		UPDATE PHIEUDKHP
 		SET TongTien = TongTien - @GiaTien
 		WHERE MaPhieuDKHP = @MaPhieuDKHP
     END
 END;
 GO
+
 -- Trigger - Tự động tính số tiền phải đóng
 CREATE TRIGGER TRIG_UD_PHIEUDKHP_TINHSOTIENPHAIDONG
 ON PHIEUDKHP FOR UPDATE
@@ -151,6 +150,7 @@ AS
 BEGIN
 	DECLARE @MaPhieuDK VARCHAR(8)
 	DECLARE @SoTienPhaiDong MONEY
+	DECLARE @TongTien MONEY
 
 	SELECT @MaPhieuDK = MaPhieuDKHP FROM inserted
 
