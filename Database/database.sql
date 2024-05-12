@@ -222,7 +222,7 @@ INSERT INTO DTUUTIEN (MaDT, TenDT, TiLeGiam) VALUES
 ('DT004', N'Vùng sâu vùng xa', 0.3),
 ('DT005', N'Mồ côi', 0.8),
 ('DT006', N'Khuyết tật', 0.5),
-('DT007', N'Hộ nghèo', 0.5)
+('DT007', N'Hộ nghèo', 0.5),
 ('DT008', N'Dân tộc thiểu số', 0.3);
 
 -- Table KHOA
