@@ -167,27 +167,6 @@ BEGIN
 END;
 GO
 
-CREATE TRIGGER TRIG_UD_DTUUTIEN_TINHSOTIENPHAIDONG 
-ON DTUUTIEN FOR UPDATE -- TiLeGiam
-AS
-BEGIN
-	DECLARE @MaDT VARCHAR(8)
-	DECLARE @SoTienPhaiDong MONEY
-
-	SELECT @MaDT = MaDT FROM inserted
-
-	UPDATE PHIEUDKHP
-    SET SoTienPhaiDong = TEMP.NewSoTienPhaiDong,
-		SoTienConLai = SoTienConLai - (SoTienPhaiDong - TEMP.NewSoTienPhaiDong)
-	FROM PHIEUDKHP
-    JOIN (SELECT MaPhieuDKHP, pdkhp.TongTien * (1 - dtut.TiLeGiam) AS NewSoTienPhaiDong
-			FROM PHIEUDKHP pdkhp 
-			JOIN SINHVIEN sv ON pdkhp.MSSV = sv.MSSV
-			JOIN DTUUTIEN dtut ON sv.MaDT = dtut.MaDT
-			WHERE dtut.MaDT = @MaDT) AS TEMP
-	ON PHIEUDKHP.MaPhieuDKHP = TEMP.MaPhieuDKHP
-END;
-GO
 -- Trigger - Tự động cập nhật số tiền đã đóng và số tiền còn lại
 CREATE TRIGGER TRIG_ISUDDL_PHIEUTHUHP_TINHSTDADONGVASTCONLAI
 ON PHIEUTHUHP FOR INSERT, UPDATE, DELETE
