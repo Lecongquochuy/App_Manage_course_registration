@@ -1,0 +1,14 @@
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\bin\Debug\net8.0\ServerLibrary.deps.json
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\bin\Debug\net8.0\ServerLibrary.dll
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\bin\Debug\net8.0\ServerLibrary.pdb
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\obj\Debug\net8.0\ServerLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\obj\Debug\net8.0\ServerLibrary.AssemblyInfoInputs.cache
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\obj\Debug\net8.0\ServerLibrary.AssemblyInfo.cs
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\obj\Debug\net8.0\ServerLibrary.csproj.CoreCompileInputs.cache
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\obj\Debug\net8.0\ServerLibrary.dll
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\obj\Debug\net8.0\refint\ServerLibrary.dll
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\obj\Debug\net8.0\ServerLibrary.pdb
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\obj\Debug\net8.0\ref\ServerLibrary.dll
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\bin\Debug\net8.0\ServerLibrary.runtimeconfig.json
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\obj\Debug\net8.0\ServerLibrary.csproj.AssemblyReference.cache
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ServerLibrary\obj\Debug\net8.0\ServerLibrary.genruntimeconfig.cache
