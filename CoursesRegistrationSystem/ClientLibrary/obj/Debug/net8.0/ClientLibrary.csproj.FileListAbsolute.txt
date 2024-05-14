@@ -1,0 +1,11 @@
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ClientLibrary\bin\Debug\net8.0\ClientLibrary.deps.json
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ClientLibrary\bin\Debug\net8.0\ClientLibrary.dll
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ClientLibrary\bin\Debug\net8.0\ClientLibrary.pdb
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ClientLibrary\obj\Debug\net8.0\ClientLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ClientLibrary\obj\Debug\net8.0\ClientLibrary.AssemblyInfoInputs.cache
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ClientLibrary\obj\Debug\net8.0\ClientLibrary.AssemblyInfo.cs
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ClientLibrary\obj\Debug\net8.0\ClientLibrary.csproj.CoreCompileInputs.cache
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ClientLibrary\obj\Debug\net8.0\ClientLibrary.dll
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ClientLibrary\obj\Debug\net8.0\refint\ClientLibrary.dll
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ClientLibrary\obj\Debug\net8.0\ClientLibrary.pdb
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\ClientLibrary\obj\Debug\net8.0\ref\ClientLibrary.dll
