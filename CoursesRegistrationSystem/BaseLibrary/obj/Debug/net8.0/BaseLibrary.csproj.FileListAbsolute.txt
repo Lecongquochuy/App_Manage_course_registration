@@ -1,0 +1,12 @@
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\BaseLibrary\bin\Debug\net8.0\BaseLibrary.deps.json
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\BaseLibrary\bin\Debug\net8.0\BaseLibrary.dll
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\BaseLibrary\bin\Debug\net8.0\BaseLibrary.pdb
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\BaseLibrary\obj\Debug\net8.0\BaseLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\BaseLibrary\obj\Debug\net8.0\BaseLibrary.AssemblyInfoInputs.cache
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\BaseLibrary\obj\Debug\net8.0\BaseLibrary.AssemblyInfo.cs
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\BaseLibrary\obj\Debug\net8.0\BaseLibrary.csproj.CoreCompileInputs.cache
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\BaseLibrary\obj\Debug\net8.0\BaseLibrary.dll
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\BaseLibrary\obj\Debug\net8.0\refint\BaseLibrary.dll
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\BaseLibrary\obj\Debug\net8.0\BaseLibrary.pdb
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\BaseLibrary\obj\Debug\net8.0\ref\BaseLibrary.dll
+D:\DAIHOC\Nam3\Ki2\Software\Project\App\CoursesRegistrationSystem\BaseLibrary\obj\Debug\net8.0\BaseLibrary.csproj.AssemblyReference.cache
