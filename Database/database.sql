@@ -128,6 +128,20 @@ CREATE TABLE BCCHUADONGHP (
     FOREIGN KEY (MSSV) REFERENCES SINHVIEN(MSSV)
 );
 
+CREATE TABLE ACCOUNT
+(
+	Id INT PRIMARY KEY,
+	DisplayName NVARCHAR(50) NOT NULL,
+	UserName VARCHAR(50) NOT NULL,
+	Password VARCHAR(50) NOT NULL,
+	Type INT NOT NULL -- 0:Admin, 1:PDT, 2:PTV
+);
+
+INSERT INTO ACCOUNT VALUES 
+(1, N'Admin', 'admin', 'password', 0),
+(2, N'Phòng đào tạo', 'phongdaotao', 'password', 1),
+(3, N'Phòng tài vụ', 'phongtaivu', 'password', 2);
+
 
 -- Insert data
 -- Table TINH
