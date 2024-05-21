@@ -89,45 +89,35 @@ GO
 -- Unique
 CREATE TRIGGER UNQ_DSMM_HKNH_MH
 ON DSMHMO
-INSTEAD OF INSERT, UPDATE
+AFTER INSERT, UPDATE
 AS
 BEGIN
     IF EXISTS (
         SELECT 1
         FROM inserted i
         JOIN DSMHMO d ON i.MaHKNH = d.MaHKNH AND i.MaMH = d.MaMH
+        WHERE i.MaMo <> d.MaMo
     )
     BEGIN
-        RAISERROR ('Trong CSDL đã tồn tại DSMHMO có MaHKNH và MaMH này.', 16, 1);
+        RAISERROR ('Trong CSDL đã tồn tại DSMHMO có MaHKNH, MaMH này.', 16, 1);
         ROLLBACK TRANSACTION;
-    END
-    ELSE
-    BEGIN
-        INSERT INTO DSMHMO (MaHKNH, MaMH)
-        SELECT MaHKNH, MaMH
-        FROM inserted;
     END
 END;
 GO
 CREATE TRIGGER UNQ_PDK_SV_HKNH
 ON PHIEUDKHP
-INSTEAD OF INSERT, UPDATE
+AFTER INSERT, UPDATE
 AS
 BEGIN
     IF EXISTS (
         SELECT 1
         FROM inserted i
         JOIN PHIEUDKHP p ON i.MSSV = p.MSSV AND i.MaHKNH = p.MaHKNH
+	WHERE i.MaPhieuDKHP <> p.MaPhieuDKHP 
     )
     BEGIN
         RAISERROR ('Trong CSDL đã tồn tại PHIEUDKHP có MSSV và MaHKNH này.', 16, 1);
         ROLLBACK TRANSACTION;
-    END
-    ELSE
-    BEGIN
-        INSERT INTO PHIEUDKHP (MSSV, MaHKNH)
-        SELECT MSSV, MaHKNH
-        FROM inserted;
     END
 END;
 
