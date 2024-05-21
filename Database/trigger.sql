@@ -87,11 +87,49 @@ BEGIN
 END;
 
 -- Unique
-ALTER TABLE DSMHMO
-ADD CONSTRAINT UNQ_DSMM_HKNH_MH UNIQUE (MaHKNH, MaMH);
+CREATE TRIGGER UNQ_DSMM_HKNH_MH
+ON DSMHMO
+INSTEAD OF INSERT, UPDATE
+AS
+BEGIN
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        JOIN DSMHMO d ON i.MaHKNH = d.MaHKNH AND i.MaMH = d.MaMH
+    )
+    BEGIN
+        RAISERROR ('Trong CSDL đã tồn tại DSMHMO có MaHKNH và MaMH này.', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
+    ELSE
+    BEGIN
+        INSERT INTO DSMHMO (MaHKNH, MaMH)
+        SELECT MaHKNH, MaMH
+        FROM inserted;
+    END
+END;
 
-ALTER TABLE PHIEUDKHP
-ADD CONSTRAINT UNQ_PDK_SV_HKNH UNIQUE (MSSV, MaHKNH);
+CREATE TRIGGER UNQ_PDK_SV_HKNH
+ON PHIEUDKHP
+INSTEAD OF INSERT, UPDATE
+AS
+BEGIN
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        JOIN PHIEUDKHP p ON i.MSSV = p.MSSV AND i.MaHKNH = p.MaHKNH
+    )
+    BEGIN
+        RAISERROR ('Trong CSDL đã tồn tại PHIEUDKHP có MSSV và MaHKNH này.', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
+    ELSE
+    BEGIN
+        INSERT INTO PHIEUDKHP (MSSV, MaHKNH)
+        SELECT MSSV, MaHKNH
+        FROM inserted;
+    END
+END;
 
 GO
 -- Trigger - xóa một phiếu DKHP sẽ xóa các thông tin liên quan.
