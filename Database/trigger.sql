@@ -1,20 +1,90 @@
 USE QLDKHP;
 
 -- Check
-ALTER TABLE SINHVIEN
-ADD CONSTRAINT CEK_SV_GIOITINH CHECK (GioiTinh IN (N'Nam', N'Nữ'));
+CREATE TRIGGER CEK_DTUT_TILEGIAM 
+ON DTUUTIEN
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    DECLARE @TiLeGiam FLOAT;
 
-ALTER TABLE HOCKY_NAMHOC
-ADD CONSTRAINT CEK_HKNH_HOCKY CHECK (HocKy IN (1, 2, 3));
+    SELECT @TiLeGiam = TiLeGiam
+    FROM inserted
 
-ALTER TABLE DTUUTIEN
-ADD CONSTRAINT CEK_DTUT_TILEGIAM CHECK (TiLeGiam >= 0 AND TiLeGiam <= 1);
+    IF @TiLeGiam < 0 OR @TiLeGiam > 1
+    BEGIN
+        RAISERROR ('Nhập sai tỉ lệ giảm. Tỉ lệ giảm phải nằm trong khoảng từ 0 đến 1.', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
+END;
 
-ALTER TABLE LOAIMON
-ADD CONSTRAINT CEK_LM_TENLOAIMON CHECK (TenLoaiMon IN (N'Lý thuyết', N'Thực hành'));
+CREATE TRIGGER CEK_SV_GIOITINH  
+ON SINHVIEN
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    DECLARE @GioiTinh NVARCHAR(3);
 
-ALTER TABLE CT_NGANH
-ADD CONSTRAINT CEK_CTN_HOCKY CHECK (HocKy IN (1, 2, 3, 4, 5, 6, 7, 8));
+    SELECT @GioiTinh = GioiTinh
+    FROM inserted
+
+    IF @GioiTinh NOT IN (N'Nam', N'Nữ')
+    BEGIN
+        RAISERROR ('Nhập sai giới tính. Giới tính phải là Nam hoặc Nữ.', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
+END;
+
+CREATE TRIGGER CEK_HKNH_HOCKY  
+ON HOCKY_NAMHOC
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    DECLARE @HocKy int;
+
+    SELECT @HocKy = HocKy
+    FROM inserted
+
+    IF @HocKy NOT IN (1, 2, 3)
+    BEGIN
+        RAISERROR ('Nhập sai học kỳ. Giá trị của học kỳ: [1, 3].', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
+END;
+
+CREATE TRIGGER CEK_LM_TENLOAIMON  
+ON LOAIMON
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    DECLARE @TenLoaiMon int;
+
+    SELECT @TenLoaiMon = TenLoaiMon
+    FROM inserted
+
+    IF @TenLoaiMon NOT IN (N'Lý thuyết', N'Thực hành')
+    BEGIN
+        RAISERROR ('Nhập sai học kỳ. Giá trị của học kỳ: [1, 8].', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
+END;
+
+CREATE TRIGGER CEK_CTN_HOCKY  
+ON CT_NGANH
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    DECLARE @HocKy int;
+
+    SELECT @HocKy = HocKy
+    FROM inserted
+
+    IF @HocKy NOT IN (1, 2, 3, 4, 5, 6, 7, 8)
+    BEGIN
+        RAISERROR ('Nhập sai tên loại môn. Tên loại môn phải là Lý thuyết hoặc Thực hành.', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
+END;
 
 -- Unique
 ALTER TABLE DSMHMO
