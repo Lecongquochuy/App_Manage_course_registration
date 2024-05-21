@@ -64,7 +64,7 @@ BEGIN
 
     IF @TenLoaiMon NOT IN (N'Lý thuyết', N'Thực hành')
     BEGIN
-        RAISERROR ('Nhập sai học kỳ. Giá trị của học kỳ: [1, 8].', 16, 1);
+        RAISERROR ('Nhập sai tên loại môn. Tên loại môn phải là Lý thuyết hoặc Thực hành.', 16, 1);
         ROLLBACK TRANSACTION;
     END
 END;
@@ -81,7 +81,7 @@ BEGIN
 
     IF @HocKy NOT IN (1, 2, 3, 4, 5, 6, 7, 8)
     BEGIN
-        RAISERROR ('Nhập sai tên loại môn. Tên loại môn phải là Lý thuyết hoặc Thực hành.', 16, 1);
+        RAISERROR ('Nhập sai học kỳ. Giá trị của học kỳ: [1, 8].', 16, 1);
         ROLLBACK TRANSACTION;
     END
 END;
