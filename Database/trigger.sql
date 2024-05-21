@@ -57,7 +57,7 @@ ON LOAIMON
 AFTER INSERT, UPDATE
 AS
 BEGIN
-    DECLARE @TenLoaiMon int;
+    DECLARE @TenLoaiMon NVARCHAR(20);
 
     SELECT @TenLoaiMon = TenLoaiMon
     FROM inserted
