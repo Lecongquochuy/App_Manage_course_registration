@@ -235,11 +235,11 @@ BEGIN
     IF EXISTS (
         SELECT 1
         FROM inserted i
-        JOIN DSMHMO d ON i.MaHKNH = d.MaHKNH AND i.MaMH = d.MaMH
+        JOIN DSMHMO d ON i.MaHKNH = d.MaHKNH AND i.MaCT_Nganh = d.MaCT_Nganh
         WHERE i.MaMo <> d.MaMo
     )
     BEGIN
-        RAISERROR ('Trong CSDL đã tồn tại DSMHMO có MaHKNH, MaMH này.', 16, 1);
+        RAISERROR ('Trong CSDL đã tồn tại DSMHMO có MaHKNH, MaCT_Nganh này.', 16, 1);
         ROLLBACK TRANSACTION;
     END
 END;
@@ -260,7 +260,23 @@ BEGIN
         ROLLBACK TRANSACTION;
     END
 END;
-
+GO
+CREATE TRIGGER UNQ_CTN_NH_MH
+ON CT_NGANH
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        JOIN CT_NGANH c ON i.MaNH = c.MaNH AND i.MaMH = c.MaMH
+	WHERE i.MaCT_Nganh <> c.MaCT_Nganh 
+    )
+    BEGIN
+        RAISERROR ('Trong CSDL đã tồn tại CT_NGANH có MaNH và MaMH này.', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
+END;
 GO
 -- Trigger - xóa một phiếu DKHP sẽ xóa các thông tin liên quan.
 CREATE TRIGGER TRIG_DL_PHIEUDKHP
@@ -297,6 +313,18 @@ BEGIN
     JOIN DELETED ON DSMHMO.MaMo = DELETED.MaMo;
 END;
 GO
+-- Trigger - xóa một ctnganh sẽ xóa các thông tin liên quan.
+CREATE TRIGGER TRIG_DL_CTNGANH
+ON CT_NGANH INSTEAD OF DELETE
+AS
+BEGIN
+    DELETE DSMHMO FROM DSMHMO
+    JOIN DELETED ON DSMHMO.MaCT_Nganh = DELETED.MaCT_Nganh;
+
+    DELETE CT_NGANH FROM CT_NGANH
+    JOIN DELETED ON CT_NGANH.MaCT_Nganh = DELETED.MaCT_Nganh;
+END;
+GO
 -- Trigger - xóa một môn học sẽ xóa các thông tin liên quan.
 CREATE TRIGGER TRIG_DL_MONHOC
 ON MONHOC INSTEAD OF DELETE
@@ -304,9 +332,6 @@ AS
 BEGIN
     DELETE CT_NGANH FROM CT_NGANH
     JOIN DELETED ON CT_NGANH.MaMH = DELETED.MaMH;
-
-    DELETE DSMHMO FROM DSMHMO
-    JOIN DELETED ON DSMHMO.MaMH = DELETED.MaMH;
 
     DELETE MONHOC FROM MONHOC
     JOIN DELETED ON MONHOC.MaMH = DELETED.MaMH;
@@ -401,7 +426,8 @@ BEGIN
 
 		SELECT @GiaTien = mh.SoTC * lm.SoTienMotTC
 		FROM DSMHMO mhmo
-		JOIN MONHOC mh ON mhmo.MaMH = mh.MaMH
+		JOIN CT_NGANH ctn ON mhmo.MaCT_Nganh = ctn.MaCT_Nganh
+		JOIN MONHOC mh ON ctn.MaMH = mh.MaMH
 		JOIN LOAIMON lm ON lm.MaLoaiMon = mh.MaLoaiMon
 		WHERE mhmo.MaMo = @MaMo
 
@@ -416,7 +442,8 @@ BEGIN
 
 		SELECT @GiaTien = mh.SoTC * lm.SoTienMotTC
 		FROM DSMHMO mhmo
-		JOIN MONHOC mh ON mhmo.MaMH = mh.MaMH
+		JOIN CT_NGANH ctn ON mhmo.MaCT_Nganh = ctn.MaCT_Nganh
+		JOIN MONHOC mh ON ctn.MaMH = mh.MaMH
 		JOIN LOAIMON lm ON lm.MaLoaiMon = mh.MaLoaiMon
 		WHERE mhmo.MaMo = @MaMo
 		
