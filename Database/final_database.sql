@@ -1,4 +1,3 @@
-﻿-- Create database
 CREATE DATABASE QLDKHP;
 GO
 
