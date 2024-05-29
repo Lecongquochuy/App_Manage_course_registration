@@ -193,23 +193,7 @@ BEGIN
     END
 END;
 GO
-CREATE TRIGGER CEK_LM_TENLOAIMON  
-ON LOAIMON
-AFTER INSERT, UPDATE
-AS
-BEGIN
-    DECLARE @TenLoaiMon NVARCHAR(20);
 
-    SELECT @TenLoaiMon = TenLoaiMon
-    FROM inserted
-
-    IF @TenLoaiMon NOT IN (N'Lý thuyết', N'Thực hành')
-    BEGIN
-        RAISERROR ('Nhập sai tên loại môn. Tên loại môn phải là Lý thuyết hoặc Thực hành.', 16, 1);
-        ROLLBACK TRANSACTION;
-    END
-END;
-GO
 CREATE TRIGGER CEK_CTN_HOCKY  
 ON CT_NGANH
 AFTER INSERT, UPDATE
