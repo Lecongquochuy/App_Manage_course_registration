@@ -416,65 +416,74 @@ CREATE TRIGGER TRIG_ISUDDL_CT_DKHP_TINHTONGTIEN
 ON CT_DKHP FOR INSERT, UPDATE, DELETE
 AS
 BEGIN
-	DECLARE @MaPhieuDKHP VARCHAR(8)
-	DECLARE @MaMo VARCHAR(8)
-	DECLARE @GiaTien MONEY
+    DECLARE @Changes TABLE (
+        MaPhieuDKHP VARCHAR(8),
+        MaMo VARCHAR(8),
+        GiaTien MONEY
+    );
 
-	IF EXISTS(SELECT * FROM inserted)
+    IF EXISTS(SELECT * FROM inserted)
     BEGIN
-		SELECT @MaPhieuDKHP = MaPhieuDKHP, @MaMo = MaMo FROM inserted
-
-		SELECT @GiaTien = mh.SoTC * lm.SoTienMotTC
-		FROM DSMHMO mhmo
-		JOIN CT_NGANH ctn ON mhmo.MaCT_Nganh = ctn.MaCT_Nganh
-		JOIN MONHOC mh ON ctn.MaMH = mh.MaMH
-		JOIN LOAIMON lm ON lm.MaLoaiMon = mh.MaLoaiMon
-		WHERE mhmo.MaMo = @MaMo
-
-		UPDATE PHIEUDKHP
-		SET TongTien = TongTien + @GiaTien
-		WHERE MaPhieuDKHP = @MaPhieuDKHP
+        INSERT INTO @Changes (MaPhieuDKHP, MaMo, GiaTien)
+        SELECT i.MaPhieuDKHP, i.MaMo,
+            mh.SoTC * lm.SoTienMotTC
+        FROM inserted i
+        JOIN DSMHMO mhmo ON i.MaMo = mhmo.MaMo
+        JOIN CT_NGANH ctn ON mhmo.MaCT_Nganh = ctn.MaCT_Nganh
+        JOIN MONHOC mh ON ctn.MaMH = mh.MaMH
+        JOIN LOAIMON lm ON mh.MaLoaiMon = lm.MaLoaiMon;
     END
 
     IF EXISTS(SELECT * FROM deleted)
     BEGIN
-		SELECT @MaPhieuDKHP = MaPhieuDKHP, @MaMo = MaMo FROM deleted
-
-		SELECT @GiaTien = mh.SoTC * lm.SoTienMotTC
-		FROM DSMHMO mhmo
-		JOIN CT_NGANH ctn ON mhmo.MaCT_Nganh = ctn.MaCT_Nganh
-		JOIN MONHOC mh ON ctn.MaMH = mh.MaMH
-		JOIN LOAIMON lm ON lm.MaLoaiMon = mh.MaLoaiMon
-		WHERE mhmo.MaMo = @MaMo
-		
-		UPDATE PHIEUDKHP
-		SET TongTien = TongTien - @GiaTien
-		WHERE MaPhieuDKHP = @MaPhieuDKHP
+        INSERT INTO @Changes (MaPhieuDKHP, MaMo, GiaTien)
+        SELECT d.MaPhieuDKHP, d.MaMo,
+            -mh.SoTC * lm.SoTienMotTC
+        FROM deleted d
+        JOIN DSMHMO mhmo ON d.MaMo = mhmo.MaMo
+        JOIN CT_NGANH ctn ON mhmo.MaCT_Nganh = ctn.MaCT_Nganh
+        JOIN MONHOC mh ON ctn.MaMH = mh.MaMH
+        JOIN LOAIMON lm ON mh.MaLoaiMon = lm.MaLoaiMon;
     END
+
+    UPDATE PHIEUDKHP
+    SET TongTien = TongTien + (
+        SELECT SUM(GiaTien)
+        FROM @Changes
+        WHERE MaPhieuDKHP = PHIEUDKHP.MaPhieuDKHP
+    )
+    WHERE EXISTS (
+        SELECT 1
+        FROM @Changes
+        WHERE MaPhieuDKHP = PHIEUDKHP.MaPhieuDKHP
+    );
 END;
 GO
-
 -- Trigger - Tự động tính số tiền phải đóng
 CREATE TRIGGER TRIG_UD_PHIEUDKHP_TINHSOTIENPHAIDONG
 ON PHIEUDKHP FOR UPDATE
 AS
 BEGIN
-	DECLARE @MaPhieuDK VARCHAR(8)
-	DECLARE @SoTienPhaiDong MONEY
-	DECLARE @TongTien MONEY
+    DECLARE @Changes TABLE (
+        MaPhieuDKHP VARCHAR(8),
+        SoTienPhaiDong MONEY,
+        SoTienConLai MONEY
+    );
 
-	SELECT @MaPhieuDK = MaPhieuDKHP FROM inserted
+    INSERT INTO @Changes (MaPhieuDKHP, SoTienPhaiDong, SoTienConLai)
+    SELECT i.MaPhieuDKHP,
+           pdkhp.TongTien * (1 - dtut.TiLeGiam),
+           pdkhp.SoTienConLai - (pdkhp.SoTienPhaiDong - pdkhp.TongTien * (1 - dtut.TiLeGiam))
+    FROM inserted i
+    JOIN PHIEUDKHP pdkhp ON i.MaPhieuDKHP = pdkhp.MaPhieuDKHP
+    JOIN SINHVIEN sv ON pdkhp.MSSV = sv.MSSV
+    JOIN DTUUTIEN dtut ON sv.MaDT = dtut.MaDT;
 
-	SELECT @SoTienPhaiDong = pdkhp.TongTien * (1 - dtut.TiLeGiam)
-	FROM PHIEUDKHP pdkhp 
-	JOIN SINHVIEN sv ON pdkhp.MSSV = sv.MSSV
-	JOIN DTUUTIEN dtut ON sv.MaDT = dtut.MaDT
-	WHERE pdkhp.MaPhieuDKHP = @MaPhieuDK
-
-	UPDATE PHIEUDKHP
-    SET SoTienPhaiDong = @SoTienPhaiDong,
-		SoTienConLai = SoTienConLai - (SoTienPhaiDong - @SoTienPhaiDong)
-    WHERE MaPhieuDKHP = @MaPhieuDK
+    UPDATE PHIEUDKHP
+    SET SoTienPhaiDong = c.SoTienPhaiDong,
+        SoTienConLai = c.SoTienConLai
+    FROM PHIEUDKHP pdkhp
+    JOIN @Changes c ON pdkhp.MaPhieuDKHP = c.MaPhieuDKHP;
 END;
 GO
 
